@@ -6,7 +6,7 @@
 */
 
 .page_wrap.login{}
-.page_wrap.login .page_logo {text-align: center;}
+.page_wrap.login .page_logo{margin-top: 25px;text-align: center;}
 .page_wrap.login .page_logo img{width: 50%;}
 
 .page_wrap.login .form_group {
@@ -151,6 +151,7 @@
 	text-align: center;
 }
 .page_wrap.login .user_btn_group button{
+	font-size: 13px;
 	color: #348fff;
 }
 .page_wrap.login .user_btn_group .id_btn{margin-left: 5px;}
