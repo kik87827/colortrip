@@ -5,3 +5,174 @@
 	use: 페이지컨텐츠
 */
 
+.page_wrap.login{}
+.page_wrap.login .page_logo {text-align: center;}
+.page_wrap.login .page_logo img{width: 50%;}
+
+.page_wrap.login .form_group {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 14px;
+	margin-top: 20px;
+}
+.page_wrap.login .form_group .input_box + .input_box{margin-top: 16px;}
+.page_wrap.login .form_group .input_box input{
+	width: 100%;
+	padding: 20px 10px;
+	font-size: 15px;
+	color: #505050;
+	border: none;
+	background: #f6f6f6;
+	box-sizing: border-box;
+}
+.page_wrap.login .form_group .input_box.check_box{
+	display: inline-block;
+	margin-top: 24px;
+}
+.page_wrap.login .form_group .input_box.check_box + .check_box{
+	margin-left: 22px;
+}
+.page_wrap.login .form_group .input_box.check_box input{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+} 
+.page_wrap.login .form_group .input_box.check_box input:checked + label::before{
+	border-color: #ff8080;
+	background: #ff8080;
+}
+.page_wrap.login .form_group .input_box.check_box input:checked + label::after{
+	border-bottom: 2px solid #fff;
+	border-left: 2px solid #fff;
+	transform: rotate(-45deg) scale(1);
+	transition: transform 100ms ease-out;	
+}
+.page_wrap.login .form_group .input_box.check_box label{
+	position: relative;
+	padding-left: 34px;
+	font-size: 14px;
+	color: #333;
+	vertical-align: 4px;
+}
+.page_wrap.login .form_group .input_box.check_box label::before{
+	content: '';
+	position: absolute;
+	top: 60%;
+	left: 0;
+	width: 1.25rem;
+	height: 1.25rem;
+	margin-top: -11px;
+	background-color: #fff;
+	border: 1px solid #aaaaaa;
+	border-radius: 100%;
+	box-sizing: border-box;
+	text-align: center;
+}
+.page_wrap.login .form_group .input_box.check_box label::after{
+	content: '';
+	position: absolute;
+	top: 70%;
+	left: 6px;
+	width: 9px;
+	height: 4px;
+	margin-top: -6px;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 2px solid #fff;
+	border-left: 2px solid #fff;
+	transform: rotate(-45deg) scale(0);
+	transition: none;
+}
+
+.page_wrap.login .form_group .btn_group{margin-top: 35px;}
+.page_wrap.login .form_group .btn_group button{
+	width: 100%;
+	padding: 16px 0;
+	text-align: center;
+	background: #ff7777;
+}
+.page_wrap.login .form_group .btn_group button span{
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.page_wrap.login .form_group .sns_btn_group ul{font-size: 0;}
+.page_wrap.login .form_group .sns_btn_group li{
+	display: inline-block;
+	width: calc(50% - 6px);
+	margin: 8px 0 0 8px;
+	padding: 12px 0;
+	font-size: 13px;
+	border: 1px solid #dbdbdb;
+	text-align: center;
+}
+.page_wrap.login .form_group .sns_btn_group li .icon{
+	display: inline-block;
+	margin-right: 5px;
+}
+.page_wrap.login .form_group .sns_btn_group li .icon.naver{
+	width: 9px;
+	height: 10px;
+	background: url(../images/icon_naver.png) no-repeat;
+	background-size: 100% auto;
+}
+.page_wrap.login .form_group .sns_btn_group li .icon.apple{
+	width: 11px;
+	height: 13px;
+	background: url(../images/icon_apple.png) no-repeat;
+	background-size: 100% auto;
+}
+.page_wrap.login .form_group .sns_btn_group li .icon.kakao{
+	width: 12px;
+	height: 11px;
+	background: url(../images/icon_kakao.png) no-repeat;
+	background-size: 100% auto;
+}
+.page_wrap.login .form_group .sns_btn_group li .icon.google{
+	width: 12px;
+	height: 12px;
+	background: url(../images/icon_google.png) no-repeat;
+	background-size: 100% auto;
+}
+.page_wrap.login .form_group .sns_btn_group li:nth-child(odd){
+	margin-left: 0;
+}
+
+.page_wrap.login .user_btn_group{
+	margin-top: 60px;
+	font-size: 13px;
+	color: #000;
+	text-align: center;
+}
+.page_wrap.login .user_btn_group button{
+	color: #348fff;
+}
+.page_wrap.login .user_btn_group .id_btn{margin-left: 5px;}
+.page_wrap.login .join_btn_group{
+	margin-top: 60px;
+	font-size: 14px;
+	color: #545454;
+	text-align: center;
+}
+.page_wrap.login .join_btn_group a{
+	position: relative;
+	margin-left: 25px;
+	padding-right: 25px;
+}
+.page_wrap.login .join_btn_group a::after{
+	content: "";
+	position: absolute;
+	top: 7px;
+	right: 1px;
+	width: 6px;
+	height: 6px;
+	border: solid #000;
+	border-width: 2px 2px 0 0;
+	transform: rotate(45deg);
+}
