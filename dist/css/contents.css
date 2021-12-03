@@ -5,27 +5,41 @@
 	use: 페이지컨텐츠
 */
 
-/* 인풋 공통 영역 */
+/* 공통 - 서브페이지 header */
+.sub_header{position: relative;padding: 17px 0;background: #ff8b8a;}
+.sub_header h1{color: #fff;font-size: 18px;font-weight: bold;text-align: center;}
+.sub_header .btn_back{position: absolute;top: 50%;left: 14px;width: 24px;height: 24px;transform: translate(0,-50%);}
+.sub_header .btn_back::after{content: "";position: absolute;top: 0;width: 10px;height: 10px;border: solid #fff;border-width: 2px 2px 0 0;transform: rotate(-135deg)translate(0,-50%);}
+
+/* 공통 - input 영역 */
 .form_group {max-width: 1200px;margin: 0 auto;padding: 0 14px;margin-top: 20px;}
 .form_group .input_box + .input_box{margin-top: 16px;}
 .form_group .input_box input{width: 100%;padding: 20px 10px;font-size: 15px;color: #505050;border: none;background: #f6f6f6;box-sizing: border-box;}
-.form_group .input_box.check_box{display: inline-block;margin-top: 24px;}
-.form_group .input_box.check_box + .check_box{margin-left: 22px;}
-.form_group .input_box.check_box input{position: absolute;width: 1px;height: 1px;margin: -1px;padding: 0;border: 0;overflow: hidden;clip: rect(0 0 0 0);}
-.form_group .input_box.check_box input:checked + label::before{border-color: #ff8080;background: #ff8080;}
-.form_group .input_box.check_box input:checked + label::after{border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(1);transition: transform 100ms ease-out;	}
-.form_group .input_box.check_box label{position: relative;padding-left: 34px;font-size: 14px;color: #333;vertical-align: 4px;}
-.form_group .input_box.check_box label::before{content: '';position: absolute;top: 60%;left: 0;width: 1.25rem;height: 1.25rem;margin-top: -11px;background-color: #fff;border: 1px solid #aaaaaa;border-radius: 100%;box-sizing: border-box;text-align: center;}
-.form_group .input_box.check_box label::after{content: '';position: absolute;top: 70%;left: 6px;width: 9px;height: 4px;margin-top: -6px;border-top: 0;border-right: 0;border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(0);transition: none;}
+.form_group .input_box label{color: #000;font-size: 13px;font-weight: 500;}
+.form_group .input_box label + input{margin-top: 9px;}
+.form_group .check_box{display: inline-block;margin-top: 24px;}
+.form_group .check_box + .check_box{margin-left: 22px;}
+.form_group .check_box input{position: absolute;width: 1px;height: 1px;margin: -1px;padding: 0;border: 0;overflow: hidden;clip: rect(0 0 0 0);}
+.form_group .check_box input:checked + label::before{border-color: #ff8080;background: #ff8080;}
+.form_group .check_box input:checked + label::after{border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(1);transition: transform 100ms ease-out;	}
+.form_group .check_box label{position: relative;padding-left: 34px;font-size: 14px;color: #333;vertical-align: 4px;}
+.form_group .check_box label::before{content: '';position: absolute;top: 60%;left: 0;width: 1.25rem;height: 1.25rem;margin-top: -11px;background-color: #fff;border: 1px solid #aaaaaa;border-radius: 100%;box-sizing: border-box;text-align: center;}
+.form_group .check_box label::after{content: '';position: absolute;top: 70%;left: 6px;width: 9px;height: 4px;margin-top: -6px;border-top: 0;border-right: 0;border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(0);transition: none;}
+
+/* 공통 - 버튼그룹 영역 */
+.btn_group{margin-top: 35px;}
+.btn_group button{width: 100%;padding: 16px 0;text-align: center;background: #ff7777;}
+.btn_group button span{font-size: 15px;font-weight: bold;color: #fff;}
+
+.btn_group.fixed {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
 
 /* 로그인 페이지 */
-.page_wrap .page_login{}
 .page_login .page_logo{margin-top: 25px;text-align: center;}
 .page_login .page_logo img{max-width: 139px;}
-
-.page_login .form_group .btn_group{margin-top: 35px;}
-.page_login .form_group .btn_group button{width: 100%;padding: 16px 0;text-align: center;background: #ff7777;}
-.page_login .form_group .btn_group button span{font-size: 15px;font-weight: bold;color: #fff;}
 
 .page_login .form_group .sns_btn_group ul{font-size: 0;}
 .page_login .form_group .sns_btn_group li{display: inline-block;width: calc(50% - 6px);margin: 8px 0 0 8px;padding: 12px 0;font-size: 13px;border: 1px solid #dbdbdb;text-align: center;}
@@ -42,3 +56,27 @@
 .page_login .join_btn_group{margin-top: 60px;font-size: 14px;color: #545454;text-align: center;}
 .page_login .join_btn_group a{position: relative;margin-left: 25px;padding-right: 25px;}
 .page_login .join_btn_group a::after{content: "";position: absolute;top: 7px;right: 1px;width: 6px;height: 6px;border: solid #000;border-width: 2px 2px 0 0;transform: rotate(45deg);}
+
+
+/* 회원가입 */
+.form_group .type_join input{padding: 14px 10px;}
+.notice_area{max-width: 180px;margin: 25px auto 0;}
+.notice_area .notice_tit{display: block;color: #000;font-size: 13px;font-weight: 500;text-align: center;}
+.notice_area .check_box{position: relative;display: block;margin-top: 15px;}
+.notice_area .check_box + .check_box{margin: 5px 0 0;}
+.notice_area .check_box input:checked + label::before{
+	border-color: #545454;
+	background: #fff;
+}
+.notice_area .check_box input:checked + label::after{
+	left: 3px;
+	width: 6px;
+	height: 2px;
+	border-width: 1px;
+	border-color: #545454;
+}
+.notice_area .check_box label{padding-left: 18px;color: #545454;font-size: 12px;}
+.notice_area .check_box label::before{width: 10px;height: 10px;margin-top: -8px;border: 1px solid #545454;border-radius: 3px;box-sizing: initial;}
+
+.notice_area .check_box .link_btn{position: absolute;top: 2px;right: 0;display: inline-block;min-width: 41px;padding: 4px 4px 2px;color: #eae7e7;font-size: 10px;font-weight: bold;border-radius: 15px;background: #7d7d7d;text-align: center;}
+.notice_area .check_box .icon_link{display: inline-block;width: 8px;height: 8px;background: url(../images/icon_link.png) no-repeat;background-size: 100% auto;}
