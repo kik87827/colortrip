@@ -31,12 +31,6 @@
 .btn_group button{width: 100%;padding: 16px 0;text-align: center;background: #ff7777;}
 .btn_group button span{font-size: 15px;font-weight: bold;color: #fff;}
 
-.btn_group.fixed {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-}
-
 /* 로그인 페이지 */
 .page_login .page_logo{margin-top: 25px;text-align: center;}
 .page_login .page_logo img{max-width: 139px;}
@@ -80,3 +74,7 @@
 
 .notice_area .check_box .link_btn{position: absolute;top: 2px;right: 0;display: inline-block;min-width: 41px;padding: 4px 4px 2px;color: #eae7e7;font-size: 10px;font-weight: bold;border-radius: 15px;background: #7d7d7d;text-align: center;}
 .notice_area .check_box .icon_link{display: inline-block;width: 8px;height: 8px;background: url(../images/icon_link.png) no-repeat;background-size: 100% auto;}
+
+.join_btn {margin-top: 25px; width: 100%;}
+.join_btn .confirm_btn {background: #989898;}
+.join_btn.on .confirm_btn{background: #ff8080;}
