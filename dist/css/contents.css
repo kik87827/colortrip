@@ -1,9 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
 
-/*
-	use: 페이지컨텐츠
-*/
+/* use: 페이지컨텐츠 */
+
 .page_body {height: 100vh;}
 .page_body.n-height{height: auto;}
 
@@ -19,6 +18,9 @@
 .form_group .input_box input{width: 100%;padding: 20px 10px;font-size: 15px;color: #505050;border: none;background: #f6f6f6;box-sizing: border-box;}
 .form_group .input_box label{color: #000;font-size: 13px;font-weight: 500;}
 .form_group .input_box label + input{margin-top: 9px;}
+.form_group .input_box .input_btn .confirm_btn{width: 100%;margin-top: 8px;padding: 14px 0;color: #fff;font-size: 15px;font-weight: bold;background: #989898;text-align: center;}
+.form_group .input_box .input_btn.on .confirm_btn{background: #ff8b8a;}
+
 .form_group .check_box{display: inline-block;margin-top: 24px;}
 .form_group .check_box + .check_box{margin-left: 22px;}
 .form_group .check_box input{position: absolute;width: 1px;height: 1px;margin: -1px;padding: 0;border: 0;overflow: hidden;clip: rect(0 0 0 0);}
@@ -27,6 +29,7 @@
 .form_group .check_box label{position: relative;padding-left: 34px;font-size: 14px;color: #333;vertical-align: 4px;}
 .form_group .check_box label::before{content: '';position: absolute;top: 60%;left: 0;width: 1.25rem;height: 1.25rem;margin-top: -11px;background-color: #fff;border: 1px solid #aaaaaa;border-radius: 100%;box-sizing: border-box;text-align: center;}
 .form_group .check_box label::after{content: '';position: absolute;top: 70%;left: 6px;width: 9px;height: 4px;margin-top: -6px;border-top: 0;border-right: 0;border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(0);transition: none;}
+
 
 /* 공통 - 버튼그룹 영역 */
 .btn_group{margin-top: 35px;}
@@ -74,10 +77,8 @@
 .notice_area .check_box input:checked + label::after{left: 3px;width: 6px;height: 2px;border-width: 1px;border-color: #545454;}
 .notice_area .check_box label{padding-left: 18px;color: #545454;font-size: 12px;}
 .notice_area .check_box label::before{width: 10px;height: 10px;margin-top: -8px;border: 1px solid #545454;border-radius: 3px;box-sizing: initial;}
-
 .notice_area .check_box .link_btn{position: absolute;top: 2px;right: 0;display: inline-block;min-width: 41px;padding: 4px 4px 2px;color: #eae7e7;font-size: 10px;font-weight: bold;border-radius: 15px;background: #7d7d7d;text-align: center;}
 .notice_area .check_box .icon_link{display: inline-block;width: 8px;height: 8px;background: url(../images/icon_link.png) no-repeat;background-size: 100% auto;}
-
 .join_btn {margin-top: 25px; width: 100%;}
 .join_btn .confirm_btn {background: #989898;}
 .join_btn.on .confirm_btn{background: #ff8080;}
@@ -87,77 +88,33 @@
 .main_title img{max-width: 135px;}
 .main_container {min-height: calc(100vh - 129.5px);background: #898989;}
 
-
 /* 메뉴 페이지 */
-.sub_header.menu{
-	position: relative;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 9px 14px;
-}
-.sub_header.menu::after{
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 5px;
-	background: #dadada;
-}
+.sub_header.menu{position: relative;display: flex;justify-content: space-between;align-items: center;padding: 9px 14px;}
+.sub_header.menu::after{content: "";position: absolute;bottom: 0;left: 0;width: 100%;height: 5px;background: #dadada;}
 .sub_header.menu > div{display: flex;align-items: center;}
-.sub_header.menu .left_area .user_img{
-	width: 38px;
-	height: 38px;
-}
-.sub_header.menu .left_area .user_name{
-	margin-left: 9px;
-	font-size: 16px;
-	font-weight: 500;
-	color: #fff;
-}
-.sub_header.menu .right_area .btn_setting{
-	width: 30px;
-	height: 30px;
-	background: url(../images/icon_setting.png) center center no-repeat;
-	background-size: 18px 19px;
-}
-.sub_header.menu .right_area .btn_close{
-	width: 30px;
-	height: 30px;
-	background: url(../images/icon_close.png) center center no-repeat;
-	background-size: 13px;
-}
-.menu_list li{
-	border-bottom: 1px solid #aaaaaa;
-}
-.menu_list li a{
-	display: block;
-	width: 100%;
-	padding: 23px 14px;
-	color: #696969;
-	font-size: 15px;
-	font-weight: 500;
-	box-sizing: border-box;
-}
+.sub_header.menu .left_area .user_img{width: 38px;height: 38px;}
+.sub_header.menu .left_area .user_name{margin-left: 9px;font-size: 16px;font-weight: 500;color: #fff;}
+.sub_header.menu .right_area .btn_setting{width: 30px;height: 30px;background: url(../images/icon_setting.png) center center no-repeat;background-size: 18px 19px;}
+.sub_header.menu .right_area .btn_close{width: 30px;height: 30px;background: url(../images/icon_close.png) center center no-repeat;background-size: 13px;}
+.menu_list li{border-bottom: 1px solid #aaaaaa;}
+.menu_list li a{display: block;width: 100%;padding: 23px 14px;color: #696969;font-size: 15px;font-weight: 500;box-sizing: border-box;}
 
-.footer_info {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	padding: 15px 14px;
-	font-size: 0;
-	background: #ff7777;
-}
-.footer_info li{
-	display: inline-block;
-	color: #fff;
-	font-size: 10px;
-}
-.footer_info li:nth-child(odd){
-	width: 40%
-}
-.footer_info li:nth-child(even){
-	width: 60%;
-}
+.footer_info {position: fixed;bottom: 0;left: 0;width: 100%;padding: 15px 14px;font-size: 0;background: #ff7777;}
+.footer_info li{display: inline-block;color: #fff;font-size: 10px;}
+.footer_info li:nth-child(odd){width: 40%}
+.footer_info li:nth-child(even){width: 60%;}
 .footer_info li:nth-child(n+2){margin-top: 10px;}
+
+/* 설정 페이지 */
+.profile_area {margin-top: 24px;}
+.profile_area .profile_img{position: relative;width: 100px;height: 100px;margin: 0 auto;border-radius: 100%;}
+.profile_area .profile_img img{display: block;width: 100%;height: 100%;object-fit: cover;object-position: center;}
+.profile_area .input_file{position: absolute;bottom: 0;right: 0;}
+.profile_area .input_file input{position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0;}
+.profile_area .input_file label{display: block;width: 30px;height: 30px;background: url(../images/icon_camera.png) no-repeat;background-size: 100% auto;}
+.profile_area .user_info{display: block;margin-top: 20px;font-size: 15px;color: #090909;text-align: center;}
+.profile_area .user_name{
+	margin-right: -4px;
+	color: #ff5c57;
+	font-weight: 500;
+}
