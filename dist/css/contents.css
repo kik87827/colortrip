@@ -4,7 +4,7 @@
 /*
 	use: 페이지컨텐츠
 */
-
+.page_body {height: 100vh;}
 /* 공통 - 서브페이지 header */
 .sub_header{position: relative;padding: 17px 0;background: #ff8b8a;}
 .sub_header h1{color: #fff;font-size: 18px;font-weight: bold;text-align: center;}
@@ -30,6 +30,16 @@
 .btn_group{margin-top: 35px;}
 .btn_group button{width: 100%;padding: 16px 0;text-align: center;background: #ff7777;}
 .btn_group button span{font-size: 15px;font-weight: bold;color: #fff;}
+
+/* 공통 - appbar */
+.app_bar {position: fixed;bottom: 0;left: 0;display: flex;width: 100%;padding: 10px 0 6px;background: #ff7777;justify-content: space-around;}
+.app_bar .appbar_btn{width: 50px;position: relative;color: #fff;font-size: 11px;font-weight: bold;text-align: center;}
+.app_bar .appbar_btn::before{content: "";display: block;height: 24px;margin-bottom: 6px;}
+.app_bar .appbar_btn.home::before{background: url(../images/icon_home.png) no-repeat;background-position: center;background-size: 22px;}
+.app_bar .appbar_btn.menu::before{background: url(../images/icon_menu.png) no-repeat;background-position: center;background-size: 22px;}
+.app_bar .appbar_btn.color::before{background: url(../images/icon_color.png) no-repeat;background-position: center;background-size: 22px;}
+.app_bar .appbar_btn.gallery::before{background: url(../images/icon_gallery.png) no-repeat;background-position: center;background-size: 22px;}
+.app_bar .appbar_btn.diray::before{background: url(../images/icon_diary.png) no-repeat;background-position: center;background-size: 22px;}
 
 /* 로그인 페이지 */
 .page_login .page_logo{margin-top: 25px;text-align: center;}
@@ -58,17 +68,8 @@
 .notice_area .notice_tit{display: block;color: #000;font-size: 13px;font-weight: 500;text-align: center;}
 .notice_area .check_box{position: relative;display: block;margin-top: 15px;}
 .notice_area .check_box + .check_box{margin: 5px 0 0;}
-.notice_area .check_box input:checked + label::before{
-	border-color: #545454;
-	background: #fff;
-}
-.notice_area .check_box input:checked + label::after{
-	left: 3px;
-	width: 6px;
-	height: 2px;
-	border-width: 1px;
-	border-color: #545454;
-}
+.notice_area .check_box input:checked + label::before{border-color: #545454;background: #fff;}
+.notice_area .check_box input:checked + label::after{left: 3px;width: 6px;height: 2px;border-width: 1px;border-color: #545454;}
 .notice_area .check_box label{padding-left: 18px;color: #545454;font-size: 12px;}
 .notice_area .check_box label::before{width: 10px;height: 10px;margin-top: -8px;border: 1px solid #545454;border-radius: 3px;box-sizing: initial;}
 
@@ -78,3 +79,8 @@
 .join_btn {margin-top: 25px; width: 100%;}
 .join_btn .confirm_btn {background: #989898;}
 .join_btn.on .confirm_btn{background: #ff8080;}
+
+/* 메인 페이지 */
+.main_title{padding: 20px 0;background: #ff8b8a;text-align: center;}
+.main_title img{max-width: 135px;}
+.main_container {min-height: calc(100vh - 129.5px);background: #898989;}
