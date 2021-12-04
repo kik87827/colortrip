@@ -3,12 +3,20 @@
 	<head>
 		@@include('./include/head.html')
 	</head>
-	<body class="page_body">
+	<body class="page_body n-height">
 		<div class="page_wrap main_page">
 			<div class="main_title">
 				<img src="../dist/images/colortrip_logo_wihte.png" alt="">
 			</div>
-			<div class="main_container"></div>
+			<div class="main_container">
+				<div class="map_control">
+					<button type="button" class="btn_map"></button>
+					<div class="sub_control">
+						<button type="button" class="btn_plus"></button>
+						<button type="button" class="btn_minus"></button>
+					</div>
+				</div>
+			</div>
 			@@include('./include/app_bar.html')
 		</div>
 	</body>
