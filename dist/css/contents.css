@@ -7,7 +7,7 @@
 .page_body.n-height{height: auto;}
 
 /* 공통 - 서브페이지 header */
-.sub_header{position: relative;padding: 17px 0;background: #ff8b8a;}
+.sub_header{position: relative;padding: 19px 0 15px;background: #ff8b8a;}
 .sub_header h1{color: #fff;font-size: 18px;font-weight: bold;text-align: center;}
 .sub_header .btn_back{position: absolute;top: 50%;left: 14px;width: 30px;height: 30px;transform: translate(0,-50%);}
 .sub_header .btn_back::after{content: "";position: absolute;top: 9px;left: 12px;width: 10px;height: 10px;border: solid #fff;border-width: 2px 2px 0 0;transform: rotate(-135deg);}
@@ -15,6 +15,7 @@
 /* 공통 - input 영역 */
 .form_group {max-width: 1200px;margin: 0 auto;padding: 0 14px;margin-top: 20px;}
 .form_group .input_box + .input_box{margin-top: 16px;}
+.form_group .input_box.mt-30{margin-top: 30px;}
 .form_group .input_box input{width: 100%;padding: 20px 10px;font-size: 15px;color: #505050;border: none;background: #f6f6f6;box-sizing: border-box;}
 .form_group .input_box label{color: #000;font-size: 13px;font-weight: 500;}
 .form_group .input_box label + input{margin-top: 9px;}
@@ -27,8 +28,8 @@
 .form_group .check_box input:checked + label::before{border-color: #ff8080;background: #ff8080;}
 .form_group .check_box input:checked + label::after{border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(1);transition: transform 100ms ease-out;	}
 .form_group .check_box label{position: relative;padding-left: 34px;font-size: 14px;color: #333;vertical-align: 4px;}
-.form_group .check_box label::before{content: '';position: absolute;top: 60%;left: 0;width: 1.25rem;height: 1.25rem;margin-top: -11px;background-color: #fff;border: 1px solid #aaaaaa;border-radius: 100%;box-sizing: border-box;text-align: center;}
-.form_group .check_box label::after{content: '';position: absolute;top: 70%;left: 6px;width: 9px;height: 4px;margin-top: -6px;border-top: 0;border-right: 0;border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(0);transition: none;}
+.form_group .check_box label::before{content: '';position: absolute;top: 50%;left: 0;width: 1.25rem;height: 1.25rem;margin-top: -11px;background-color: #fff;border: 1px solid #aaaaaa;border-radius: 100%;box-sizing: border-box;text-align: center;}
+.form_group .check_box label::after{content: '';position: absolute;top: 65%;left: 6px;width: 9px;height: 4px;margin-top: -6px;border-top: 0;border-right: 0;border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(0);transition: none;}
 
 
 /* 공통 - 버튼그룹 영역 */
@@ -84,9 +85,9 @@
 .join_btn.on .confirm_btn{background: #ff8080;}
 
 /* 메인 페이지 */
-.main_title{padding: 20px 0;background: #ff8b8a;text-align: center;}
+.main_title{padding: 20px 0 13px;background: #ff8b8a;text-align: center;}
 .main_title img{max-width: 135px;}
-.main_container {position: relative;min-height: calc(100vh - 129.5px);background: #898989;}
+.main_container {position: relative;min-height: calc(100vh - 122.5px);background: #898989;}
 .map_control{
 	position: absolute;
 	top: 17px;
