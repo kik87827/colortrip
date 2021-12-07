@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<title></title>
+<style type="text/css">
+*{margin:0;padding:0;}
+ul{list-style: none;margin:0;padding:0;}
+table {border-collapse:collapse; border-spacing:0;}
+table th, strong {font-weight:normal;}
+body{margin:20px;}
+.source_his_z{margin-top:40px;border-top:2px solid #000;padding:20px 0 20px;border-bottom:1px solid #000;}
+.source_his_item{margin:0 0 20px 0;border-bottom:1px solid #ddd;padding-bottom:20px;}
+.source_his_item:last-of-type{margin:0;padding-bottom:0;border-bottom:0;}
+.coment_2{margin-top:10px;}
+h1{font-size:20px;letter-spacing:-1px}
+.coment{color:red;font-size:12px;font-weight:bold;margin-top:20px;}
+.issue{font-size:14px;}
+.issue .date{font-weight:bold;}
+.textarea_size{box-sizing:border-box;width:100%;padding:20px;margin-top:10px;overflow:hidden;resize:none;}
+</style>
+<script>
+	var htmlArray = [],
+		reverseArray = [];
+	$(function(){
+		$(".source_his_item").each(function(){
+			htmlArray.push($(this).get(0));
+		});
+		reverseArray = htmlArray.reverse();
+		$(".source_his_item").remove();
+		for(var i = 0 ; i<= reverseArray.length-1; i++){
+			$(".source_his_z").append(reverseArray[i]);
+		}
+		cmaTextareaSize();
+	});
+
+	function cmaTextareaSize(obj, bsize) { // 객체명, 기본사이즈
+		var sTextarea = $(".textarea_size");
+		sTextarea.each(function(){
+			$(this).css("height",$(this)[0].scrollHeight);
+		});
+	}
+	
+</script>
+
+</head>
+<body id="guide">
+	<h1>수정 이슈로 인한 HTML 변경 히스토리 목록</h1>
+
+	<p class="coment_2">css, images, js는 통으로 덮어 업데이트 바랍니다.</p>
+
+	<p class="coment">예시) 210809 날짜를 확인하시어 HTML내 아래와 같이 표기예정 ctrl + F로 검색하여 개발소스내 수정하시면 됩니다.<br><br>&lt;!-- 210809 --&gt; <br> &lt;!-- // 210809 --&gt;</p>
+	<div class="source_his_z">
+		<!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[210809]</span>메인 수정</p>
+			<textarea class="textarea_size">
+css/main.css 수정 
+css/contents.css 수정
+css/layout.css 수정
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+		<!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[210809]</span>달력 및 기타 수정</p>
+			<textarea class="textarea_size">
+member_dataform_group.html
+
+image/css/js/ 통으로 덮어주세요.
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+		<!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[210828]</span>웹접근성 이슈 - 탭 컨텐츠 내 히든 타아틀 추가, 레이어팝업 title</p>
+			<textarea class="textarea_size">
+participation_talent_donation_detail.html
+plan_contribution_suggestion_detail.html
+
+participation_talent_donation_detail_result_registration.html
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+		<!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[210831]</span>다나 수정대응</p>
+			<textarea class="textarea_size">
+mypage_personal_total_card_manage.html 테이블 내 수정
+mypage_personal_mydata_modify.html 문구 수정
+mypage_group_mydata_modify.html 문구 수정
+mypage_demend_group_mydata_modify.html 내용 누락
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+		<!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[210901]</span>다나 수정대응</p>
+			<textarea class="textarea_size">
+participation_workdata_place.html  검색영역 추가
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+        
+        <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[210903]</span> 다나가 수정&추가 </p>
+			<textarea class="textarea_size">
+codinglist.html 수정
+contents.css 수정
+plan_contest_detail.html 수정
+plan_evaluation_result_detail.html 수정
+              
+plan_excellent_list.html          페이지 추가
+plan_excellent_detail.html        페이지 추가
+plan_total_list.html              페이지 추가
+plan_total_detail.html            페이지 추가
+education_online_detail.html       페이지 추가
+education_offline.html             페이지 추가
+education_offline_detail.html      페이지 추가
+news_notice_detail.html            페이지 추가
+news_excellent_inquire_list.html   페이지 추가
+news_excellent_inquire_detail.html 페이지 추가
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+        
+        <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[210904]</span>  게시판 상세 - 좋아요, 페이스북공유, 카카오톡공유 버튼에 title 넣어주세요(웹접근성)</p>
+			<textarea class="textarea_size">
+member_dataform_personal.html
+member_login.html
+mypage_personal_mydata_modify.html
+participation_talent_donation_detail.html
+plan_contribution_suggestion_detail.html
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+        
+         <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[210906]</span> dana 수정 및 작업추가</p>
+			<textarea class="textarea_size">
+수정
+codinglist.html
+participation_talent_donation_detail_result_registration.html 
+participation_meeting_guide_detail.html 
+participation_talent_donation_registration.html
+plan_contribution_suggestion_form.html
+mypage_group_total_card_worklist_history.html 
+mypage_group_workmanage_history.html
+
+
+
+추가작업
+reference_example_result_detail.html 
+reference_data.html
+reference_data_detail.html
+mypage_group_mydata_modify_withdrawal.html 
+mypage_personal_total_card_manage.html
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+         <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[210907]</span> dana 수정 및 작업추가</p>
+			<textarea class="textarea_size">
+수정
+codinglist.html
+contents.css
+member_dataform_personal.html
+member_dataform_group.html 
+member_dataform_demand.html
+participation_talent_donation_detail.html
+plan_contribution_suggestion_detail.html
+mypage_personal_mydata_modify.html 
+mypage_group_mydata_modify.html 
+mypage_group_workmanage_history_registration.html
+mypage_demend_total_card_worklist_history.html
+mypage_demend_group_mydata_modify.html
+mypage_group_total_card_worklist_history
+
+추가작업
+mypage_demend_workmanage_history.html
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+        
+         <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[210910]</span> dana 수정</p>
+			<textarea class="textarea_size">
+수정
+contents.css
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+        
+        
+            <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[210913]</span> dana 수정</p>
+			<textarea class="textarea_size">
+수정
+contents.css
+codinglist.html
+
+추가
+guide_privacy_email.html
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+        
+        
+          <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[210923]</span> dana 수정</p>
+			<textarea class="textarea_size">
+수정
+ico_quick_mb.png
+card_exam_02.jpg
+ico_maphome.svg
+main.css
+layout.css
+contents.css
+codinglist.html
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+
+        <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[210929]</span> Leo 수정</p>
+			<textarea class="textarea_size">
+수정
+main.css		210 Line 추가
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+         <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[211001]</span> dana 수정</p>
+			<textarea class="textarea_size">
+수정
+mypage_personal_total_card_manage_update.html 내용수정
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+
+        <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[211007]</span> Leo 수정</p>
+			<textarea class="textarea_size">
+수정
+layout.css		158 Line 추가
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+
+        <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[211012]</span>인경 수정</p>
+			<textarea class="textarea_size">
+mypage_personal_mileage_present.html 탭모양변경(class)
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+        <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[211013]</span>dana 수정</p>
+			<textarea class="textarea_size">
+codinglist.html 수정
+news_excellent_sale.html 수정 (경로부분)
+news_excellent_sale_detail.html 수정 (경로부분)
+news_excellent_sale_info.html 수정
+education_info.html 수정
+guide_info.html 수정
+mypage_personal_mileage_info.html 수정
+news_excellent_mileage_info.html 추가
+
+contents.css 수정
+
+bg_guideinfo.png 이미지 수정
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+        
+         <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[211018]</span>dana 수정</p>
+			<textarea class="textarea_size">
+codinglist.html 수정
+header_logo.png 이미지 수정
+header_logo_ratio.png 이미지 수정
+header_mlogo.png 이미지 수정
+
+layout.css 수정
+
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+
+         <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[211025]</span> Leo 수정</p>
+			<textarea class="textarea_size">
+contents.css		391 Line 주석 처리, 392 Line 추가
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+
+         <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[211026]</span> Leo 수정</p>
+			<textarea class="textarea_size">
+contents.css		611~613 Line 수정
+front.js		1062~1062 Line 수정
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+         <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[211102]</span> dana 수정</p>
+			<textarea class="textarea_size">
+member_dataform_personal.html
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+        
+        <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[211117]</span> dana 수정</p>
+			<textarea class="textarea_size">
+footer 영역에 구글플레이, 애플스토어아이콘 삽입
+-> main.html  -  footer 영역 수정
+-> layout.css 수정
+-> main.css 수정
+-> images/footer_sns.png 덮어씌우기
+-> images/footer_sns_ratio.png   덮어씌우기
+
+contents.css 수정  readonly css(328줄) 추가
+
+
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+
+         <!-- source_his_item -->
+		<div class="source_his_item">
+			<p class="issue"><span class="date">[211122]</span> Leo 수정</p>
+			<textarea class="textarea_size">
+front.js		246~261 Line 수정
+			</textarea>
+		</div>
+		<!-- // source_his_item -->
+
+	</div>
+</body>
+</html>
