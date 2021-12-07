@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		@@include('./include/head.html')
+	</head>
+	<body class="page_body">
+		<div class="page_wrap">
+			<header class="sub_header">
+				<h1>다 함께 멋진 컬러링을 해봐요!</h1>
+				<button class="btn_back"></button>
+			</header>
+			<div class="sub_content">
+				<div class="coloring_container">
+					<div class="coloring_start">
+						<div class="img_area">
+							<img src="../dist/images/img_coloring_dummy01.png" alt="">
+						</div>
+						<div class="info_area">
+							<span class="type_tit">종달리해안도</span>
+							<span class="type_txt">
+								내 위치에서 
+								<span class="type_point">0.5km</span>
+								거리에 있습니다.
+							</span>
+						</div>
+						<div class="coloring_menu">
+							<ul>
+								<!-- menu_list + on class 추칵 시 아이콘 활성화 됩니다. -->
+								<li class="menu_list">
+									<a href="#">
+										<span class="icon icon_road"></span>
+										길찾기
+									</a>
+								</li>
+								<li class="menu_list">
+									<a href="#">
+										<span class="icon icon_guide"></span>
+										관광안내
+									</a>
+								</li>
+								<li class="menu_list">
+									<a href="#">
+										<span class="icon icon_diary"></span>
+										다이어리
+									</a>
+								</li>
+								<li class="menu_list">
+									<a href="#">
+										<span class="icon icon_coloring"></span>
+										컬러링 시작
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			@@include('./include/app_bar.html')
+		</div>
+	</body>
+</html>

@@ -16,7 +16,8 @@
 /* 공통 - 서브페이지 content */
 .sub_content {
 	min-height: calc(100vh - 123px);
-	padding: 60px 0 63px 0;
+	padding-top: 60px;
+	padding-bottom: calc(env(safe-area-inset-bottom) + 63px);
 	background: #f7f8fa;
 }
 
@@ -96,7 +97,7 @@
 /* 메인 페이지 */
 .main_header{position: fixed;top: 0;left: 0;width: 100%;padding: 20px 0 13px;background: #ff8b8a;text-align: center;z-index: 10;}
 .main_header img{max-width: 135px;}
-.main_container {position: relative;min-height: calc(100vh - 123px);padding: 60px 0 63px 0; background: #898989;}
+.main_container {position: relative;min-height: calc(100vh - 123px);padding-top: 60px;padding-bottom: calc(env(safe-area-inset-bottom) + 63px); background: #898989;}
 .map_control{
 	position: fixed;
 	top: 77px;
@@ -155,8 +156,150 @@
 .profile_area .input_file input{position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0;}
 .profile_area .input_file label{display: block;width: 30px;height: 30px;background: url(../images/icon_camera.png) no-repeat;background-size: 100% auto;}
 .profile_area .user_info{display: block;margin-top: 20px;font-size: 15px;color: #090909;text-align: center;}
-.profile_area .user_name{
-	margin-right: -4px;
-	color: #ff5c57;
-	font-weight: 500;
+.profile_area .user_name{margin-right: -4px;color: #ff5c57;font-weight: 500;}
+
+/* 갤러리 페이지 */
+.gallery_group{padding: 20px 0;}
+.gallery_list{display: flex;justify-content: space-between;align-items: center;padding: 17px 14px;background: #fff;}
+.gallery_list + .gallery_list{margin-top: 10px;}
+.gallery_list .content_area{display: flex;align-items: center;text-align: center;}
+.gallery_list .content_area .img_area{width: 75px;height: 75px;}
+.gallery_list .content_area .txt_area span{display: block;margin-left: 20px;color: #000;font-size: 16px;font-weight: bold;}
+.gallery_list .content_area .txt_area .type_date{margin-top: 20px;color: #ff635e;font-size: 11px;}
+.gallery_list .content_area .txt_area .type_date::before{content: "";display: inline-block;width: 11px;height: 13px;margin-right: 6px;background: url(../images/icon_calendar) no-repeat;background-size: 100% auto;background-position: 0 1px;}
+.gallery_list .stamp_area .stamp_name{position: relative;color: #cacaca;font-size: 8px;font-weight: bold;}
+.gallery_list .stamp_area .stamp_name::before{content: "";display: block;width: 55px;height: 55px;margin: 0 auto;background: url(../images/img_stamp.png) no-repeat;background-size: 100% auto;}
+.gallery_list.on .stamp_area .stamp_name{color: #ff6767;}
+.gallery_list.on .stamp_area .stamp_name::before{background: url(../images/img_stamp_on.png) no-repeat;background-size: 100% auto;}
+
+
+/* 컬러링 페이지 */
+.coloring_tab{padding: 14px 5px;border-bottom: 1px solid #dedede;overflow: auto;white-space: nowrap;-ms-overflow-style: none;scrollbar-width: none;}
+.coloring_tab::-webkit-scrollbar {display: none; }
+.coloring_tab .tab_list{position: relative;display: inline-block;}
+.coloring_tab .tab_list input{position: absolute;top: 0;left: 0;display: inline-block;width: 20px;height: 20px;padding: 0;border: 0;border-radius: 0;outline: 0;opacity: 0;}
+.coloring_tab .tab_list input:checked + label{color: #fff;background-color: #ff635e;}
+.coloring_tab .tab_list label{min-width: 45px;padding: 3px 10px 5px;font-size: 16px;color: #010101;border-radius: 25px;box-sizing: border-box;cursor: pointer;text-align: center;}
+
+.coloring_list {
+	padding: 18px 14px;
+	font-size: 0;
+	text-align: center;
+}
+.coloring_list .list_item{
+	display: inline-block;
+	width: calc(50% - 12px);
+	margin: 16px 0 0 12px;
+}
+.coloring_list .list_item:nth-child(odd){
+	margin-left: 0;
+}
+.coloring_list .list_item:nth-child(1),
+.coloring_list .list_item:nth-child(2){
+	margin-top: 0;
+}
+.coloring_list .type_tit{
+	color: #545454;
+	font-size: 13px;
+}
+.coloring_list .img_area{
+	margin-top: 6px;
+	border: 3px solid #ffe4e4;
+	border-radius: 12px;
+	overflow: hidden;
+}
+.coloring_list .img_area img{width: 100%;}
+
+/* 컬러링 시작 */
+.coloring_start{
+	padding: 20px 14px 0;
+}
+.coloring_start .img_area img{width: 100%;}
+.coloring_start .info_area{
+	margin-top: 30px;
+}
+.coloring_start span{
+	display: block;
+	color: #545454;
+	font-size: 14px;
+}
+.coloring_start span + span{margin-top: 18px;}
+.coloring_start .type_tit{
+	color: #000;
+	font-size: 16px;
+	font-weight: bold;
+}
+.coloring_start .type_point{display: inline-block;}
+
+.coloring_menu {margin-top: 36px;}
+.coloring_menu ul{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.coloring_menu .menu_list a{
+	display: block;
+	width: 100%;
+	color: #545454;
+	font-size: 14px;
+	text-align: center;
+}
+.coloring_menu .menu_list .icon{
+	position: relative;
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin-bottom: 18px;
+	border: 1px solid #d4d4d4;
+	border-radius: 100%;
+	background: #fff;
+}
+.coloring_menu .menu_list .icon.icon::before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 25px;
+	height: 25px;
+	transform: translate(-50%,-50%);
+}
+.coloring_menu .menu_list .icon.icon_road::before{
+	background: url(../images/icon_road.png) no-repeat;
+	background-size: 100% auto;
+}
+.coloring_menu .menu_list .icon.icon_guide::before{
+	background: url(../images/icon_guide.png) no-repeat;
+	background-size: 100% auto;
+}
+.coloring_menu .menu_list .icon.icon_diary::before{
+	width: 20px;
+	height: 22px;
+	background: url(../images/icon_diary01.png) no-repeat;
+	background-size: 100% auto;
+}
+.coloring_menu .menu_list .icon.icon_coloring::before{
+	background: url(../images/icon_coloring.png) no-repeat;
+	background-size: 100% auto;
+}
+
+.coloring_menu .menu_list.on .icon{
+	border-color: #ffd7d7;
+}
+.coloring_menu .menu_list.on .icon.icon_road::before{
+	background: url(../images/icon_road_on.png) no-repeat;
+	background-size: 100% auto;
+}
+.coloring_menu .menu_list.on .icon.icon_guide::before{
+	background: url(../images/icon_guide_on.png) no-repeat;
+	background-size: 100% auto;
+}
+.coloring_menu .menu_list.on .icon.icon_diary::before{
+	width: 20px;
+	height: 22px;
+	background: url(../images/icon_diary01_on.png) no-repeat;
+	background-size: 100% auto;
+}
+.coloring_menu .menu_list.on .icon.icon_coloring::before{
+	background: url(../images/icon_coloring_on.png) no-repeat;
+	background-size: 100% auto;
 }
