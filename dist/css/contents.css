@@ -194,6 +194,16 @@
 	color: #ff635e;
 	font-size: 11px;
 }
+.gallery_list .content_area .txt_area .type_date::before{
+	content: "";
+	display: inline-block;
+	width: 11px;
+	height: 13px;
+	margin-right: 6px;
+	background: url(../images/icon_calendar) no-repeat;
+	background-size: 100% auto;
+	background-position: 0 1px;
+}
 .gallery_list .stamp_area .stamp_name{
 	position: relative;
 	color: #cacaca;
