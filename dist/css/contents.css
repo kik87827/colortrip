@@ -1,7 +1,153 @@
 @charset "utf-8";
 /* CSS Document */
 
-/*
-	use: 페이지컨텐츠
-*/
+/* use: 페이지컨텐츠 */
 
+.page_body {height: 100vh;}
+.page_body.n-height{height: auto;}
+
+/* 공통 - 서브페이지 header */
+.sub_header{position: relative;padding: 19px 0 15px;background: #ff8b8a;}
+.sub_header h1{color: #fff;font-size: 18px;font-weight: bold;text-align: center;}
+.sub_header .btn_back{position: absolute;top: 50%;left: 14px;width: 30px;height: 30px;transform: translate(0,-50%);}
+.sub_header .btn_back::after{content: "";position: absolute;top: 9px;left: 12px;width: 10px;height: 10px;border: solid #fff;border-width: 2px 2px 0 0;transform: rotate(-135deg);}
+
+/* 공통 - input 영역 */
+.form_group {max-width: 1200px;margin: 0 auto;padding: 0 14px;margin-top: 20px;}
+.form_group .input_box + .input_box{margin-top: 16px;}
+.form_group .input_box.mt-30{margin-top: 30px;}
+.form_group .input_box input{width: 100%;padding: 20px 10px;font-size: 15px;color: #505050;border: none;background: #f6f6f6;box-sizing: border-box;}
+.form_group .input_box label{color: #000;font-size: 13px;font-weight: 500;}
+.form_group .input_box label + input{margin-top: 9px;}
+.form_group .input_box .input_btn .confirm_btn{width: 100%;margin-top: 8px;padding: 14px 0;color: #fff;font-size: 15px;font-weight: bold;background: #989898;text-align: center;}
+.form_group .input_box .input_btn.on .confirm_btn{background: #ff8b8a;}
+
+.form_group .check_box{display: inline-block;margin-top: 24px;}
+.form_group .check_box + .check_box{margin-left: 22px;}
+.form_group .check_box input{position: absolute;width: 1px;height: 1px;margin: -1px;padding: 0;border: 0;overflow: hidden;clip: rect(0 0 0 0);}
+.form_group .check_box input:checked + label::before{border-color: #ff8080;background: #ff8080;}
+.form_group .check_box input:checked + label::after{border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(1);transition: transform 100ms ease-out;	}
+.form_group .check_box label{position: relative;padding-left: 34px;font-size: 14px;color: #333;vertical-align: 4px;}
+.form_group .check_box label::before{content: '';position: absolute;top: 50%;left: 0;width: 1.25rem;height: 1.25rem;margin-top: -11px;background-color: #fff;border: 1px solid #aaaaaa;border-radius: 100%;box-sizing: border-box;text-align: center;}
+.form_group .check_box label::after{content: '';position: absolute;top: 65%;left: 6px;width: 9px;height: 4px;margin-top: -6px;border-top: 0;border-right: 0;border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(0);transition: none;}
+
+
+/* 공통 - 버튼그룹 영역 */
+.btn_group{margin-top: 35px;}
+.btn_group button{width: 100%;padding: 16px 0;text-align: center;background: #ff7777;}
+.btn_group button span{font-size: 15px;font-weight: bold;color: #fff;}
+
+/* 공통 - appbar */
+.app_bar {position: fixed;bottom: 0;left: 0;display: flex;width: 100%;padding: 10px 0 6px;background: #ff7777;justify-content: space-around;}
+.app_bar .appbar_btn{width: 50px;position: relative;color: #fff;font-size: 11px;font-weight: bold;text-align: center;}
+.app_bar .appbar_btn::before{content: "";display: block;height: 24px;margin-bottom: 6px;}
+.app_bar .appbar_btn.home::before{background: url(../images/icon_home.png) no-repeat;background-position: center;background-size: 22px;}
+.app_bar .appbar_btn.menu::before{background: url(../images/icon_menu.png) no-repeat;background-position: center;background-size: 22px;}
+.app_bar .appbar_btn.color::before{background: url(../images/icon_color.png) no-repeat;background-position: center;background-size: 22px;}
+.app_bar .appbar_btn.gallery::before{background: url(../images/icon_gallery.png) no-repeat;background-position: center;background-size: 22px;}
+.app_bar .appbar_btn.diray::before{background: url(../images/icon_diary.png) no-repeat;background-position: center;background-size: 22px;}
+
+/* 로그인 페이지 */
+.page_login .page_logo{margin-top: 25px;text-align: center;}
+.page_login .page_logo img{max-width: 139px;}
+
+.page_login .form_group .sns_btn_group ul{font-size: 0;}
+.page_login .form_group .sns_btn_group li{display: inline-block;width: calc(50% - 6px);margin: 8px 0 0 8px;padding: 12px 0;font-size: 13px;border: 1px solid #dbdbdb;text-align: center;}
+.page_login .form_group .sns_btn_group li .icon{display: inline-block;margin-right: 5px;}
+.page_login .form_group .sns_btn_group li .icon.naver{width: 9px;height: 10px;background: url(../images/icon_naver.png) no-repeat;background-size: 100% auto;}
+.page_login .form_group .sns_btn_group li .icon.apple{width: 11px;height: 13px;background: url(../images/icon_apple.png) no-repeat;background-size: 100% auto;}
+.page_login .form_group .sns_btn_group li .icon.kakao{width: 12px;height: 11px;background: url(../images/icon_kakao.png) no-repeat;background-size: 100% auto;}
+.page_login .form_group .sns_btn_group li .icon.google{width: 12px;height: 12px;background: url(../images/icon_google.png) no-repeat;background-size: 100% auto;}
+.page_login .form_group .sns_btn_group li:nth-child(odd){margin-left: 0;}
+
+.page_login .user_btn_group{margin-top: 60px;font-size: 13px;color: #000;text-align: center;}
+.page_login .user_btn_group button{font-size: 13px;color: #348fff;}
+.page_login .user_btn_group .id_btn{margin-left: 5px;}
+.page_login .join_btn_group{margin-top: 60px;font-size: 14px;color: #545454;text-align: center;}
+.page_login .join_btn_group a{position: relative;margin-left: 25px;padding-right: 25px;}
+.page_login .join_btn_group a::after{content: "";position: absolute;top: 7px;right: 1px;width: 6px;height: 6px;border: solid #000;border-width: 2px 2px 0 0;transform: rotate(45deg);}
+
+
+/* 회원가입 */
+.form_group .type_join input{padding: 14px 10px;}
+.notice_area{max-width: 180px;margin: 25px auto 0;}
+.notice_area .notice_tit{display: block;color: #000;font-size: 13px;font-weight: 500;text-align: center;}
+.notice_area .check_box{position: relative;display: block;margin-top: 15px;}
+.notice_area .check_box + .check_box{margin: 5px 0 0;}
+.notice_area .check_box input:checked + label::before{border-color: #545454;background: #fff;}
+.notice_area .check_box input:checked + label::after{left: 3px;width: 6px;height: 2px;border-width: 1px;border-color: #545454;}
+.notice_area .check_box label{padding-left: 18px;color: #545454;font-size: 12px;}
+.notice_area .check_box label::before{width: 10px;height: 10px;margin-top: -8px;border: 1px solid #545454;border-radius: 3px;box-sizing: initial;}
+.notice_area .check_box .link_btn{position: absolute;top: 3px;right: 0;display: inline-block;min-width: 41px;padding: 4px 8px 2px;color: #eae7e7;font-size: 10px;font-weight: bold;border-radius: 15px;background: #7d7d7d;text-align: center;}
+.notice_area .check_box .icon_link{display: inline-block;width: 8px;height: 8px;background: url(../images/icon_link.png) no-repeat;background-size: 100% auto;}
+.join_btn {margin-top: 25px; width: 100%;}
+.join_btn .confirm_btn {background: #989898;}
+.join_btn.on .confirm_btn{background: #ff8080;}
+
+/* 메인 페이지 */
+.main_title{padding: 20px 0 13px;background: #ff8b8a;text-align: center;}
+.main_title img{max-width: 135px;}
+.main_container {position: relative;min-height: calc(100vh - 122.5px);background: #898989;}
+.map_control{
+	position: absolute;
+	top: 17px;
+	right: 14px;
+}
+.map_control button{
+	display: block;
+	width: 38px;
+	height: 38px;
+	box-shadow: 4px 4px 3px 0px rgb(4 0 0 / 15%);
+	background: #ff8b8a;
+	border-radius: 100%;
+}
+.map_control .btn_map{
+	background: #ff8b8a url(../images/icon_map.png) center center no-repeat;
+	background-size: 20px;
+}
+.map_control .sub_control{
+	margin-top: 19px;
+}
+.map_control .sub_control button{
+	border-radius: 6px;
+}
+.map_control .sub_control button + button{margin-top: 7px;}
+.map_control .sub_control .btn_plus{
+	background: #ff8b8a url(../images/icon_plus.png) center center no-repeat;
+	background-size: 15px;
+}
+.map_control .sub_control .btn_minus{
+	background: #ff8b8a url(../images/icon_minus.png) center center no-repeat;
+	background-size: 15px;
+}
+
+/* 메뉴 페이지 */
+.sub_header.menu{position: relative;display: flex;justify-content: space-between;align-items: center;padding: 9px 14px 14px;}
+.sub_header.menu::after{content: "";position: absolute;bottom: 0;left: 0;width: 100%;height: 5px;background: #dadada;}
+.sub_header.menu > div{display: flex;align-items: center;}
+.sub_header.menu .left_area .user_img{width: 38px;height: 38px;}
+.sub_header.menu .left_area .user_name{margin-left: 9px;font-size: 16px;font-weight: 500;color: #fff;}
+.sub_header.menu .right_area .btn_setting{width: 30px;height: 30px;background: url(../images/icon_setting.png) center center no-repeat;background-size: 18px 19px;}
+.sub_header.menu .right_area .btn_close{width: 30px;height: 30px;background: url(../images/icon_close.png) center center no-repeat;background-size: 13px;}
+.menu_list li{border-bottom: 1px solid #aaaaaa;}
+.menu_list li a{display: block;width: 100%;padding: 23px 14px;color: #696969;font-size: 15px;font-weight: 500;box-sizing: border-box;}
+
+.footer_info {position: fixed;bottom: 0;left: 0;width: 100%;padding: 15px 14px;font-size: 0;background: #ff7777;}
+.footer_info li{display: inline-block;color: #fff;font-size: 10px;}
+.footer_info li:nth-child(odd){width: 40%}
+.footer_info li:nth-child(even){width: 60%;}
+.footer_info li:nth-child(n+3){margin-top: 10px;}
+
+/* 설정 페이지 */
+.profile_area {margin-top: 24px;}
+.profile_area .profile_img{position: relative;width: 100px;height: 100px;margin: 0 auto;border-radius: 100%;}
+.profile_area .profile_img img{display: block;width: 100%;height: 100%;object-fit: cover;object-position: center;}
+.profile_area .input_file{position: absolute;bottom: 0;right: 0;}
+.profile_area .input_file input{position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0;}
+.profile_area .input_file label{display: block;width: 30px;height: 30px;background: url(../images/icon_camera.png) no-repeat;background-size: 100% auto;}
+.profile_area .user_info{display: block;margin-top: 20px;font-size: 15px;color: #090909;text-align: center;}
+.profile_area .user_name{
+	margin-right: -4px;
+	color: #ff5c57;
+	font-weight: 500;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		@@include('./include/head.html')
+	</head>
+	<body class="page_body">
+		<div class="page_wrap">
+			<header class="sub_header">
+				<h1>설정</h1>
+				<button class="btn_back"></button>
+			</header>
+			<div class="profile_area">
+				<div class="profile_img">
+					<img src="../dist/images/profile_dummy.png" alt="">
+					<div class="input_file">
+						<input type="file" id="file01">
+						<label for="file01"></label>
+					</div>
+				</div>
+				<span class="user_info">
+					<span class="user_name">닉네임</span>
+					님 안녕하세요
+				</span>
+			</div>
+			<div class="page_login">
+				<div class="form_group">
+					<form class="login_area type_join">
+						<div class="input_box">
+							<label for="check01">닉네임 수정</label>
+							<input type="text" id="check01" placeholder="아이디 또는 이메일을 입력해주세요.">
+							<!-- input_btn + on class 추가 시 버튼 활성화 됩니다. -->
+							<div class="input_btn">
+								<button type="button" class="confirm_btn">변경</button>
+							</div>
+						</div>
+						<div class="input_box type_join mt-30">
+							<label for="check02">현재비밀번호</label>
+							<input type="password" id="check02" placeholder="영문,숫자,특수문자 조합 9~16자로 입력">
+						</div>
+						<div class="input_box type_join">
+							<label for="check03">새비밀번호</label>
+							<input type="password" id="check03" placeholder="영문,숫자,특수문자 조합 9~16자로 입력">
+						</div>
+						<div class="input_box type_join">
+							<label for="check04">새비밀번호 확인</label>
+							<input type="password" id="check04" placeholder="영문,숫자,특수문자 조합 9~16자로 입력">
+							<!-- input_btn + on class 추가 시 버튼 활성화 됩니다. -->
+							<div class="input_btn">
+								<button type="button" class="confirm_btn">변경</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
