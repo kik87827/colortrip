@@ -52,7 +52,8 @@
 .page_login .page_logo img{max-width: 139px;}
 
 .page_login .form_group .sns_btn_group ul{font-size: 0;}
-.page_login .form_group .sns_btn_group li{display: inline-block;width: calc(50% - 6px);margin: 8px 0 0 8px;padding: 12px 0;font-size: 13px;border: 1px solid #dbdbdb;text-align: center;}
+.page_login .form_group .sns_btn_group li{display: inline-block;width: calc(50% - 6px);margin: 8px 0 0 8px;font-size: 13px;border: 1px solid #dbdbdb;text-align: center;}
+.page_login .form_group .sns_btn_group li a{display: block;width: 100%;padding: 12px 0;}
 .page_login .form_group .sns_btn_group li .icon{display: inline-block;margin-right: 5px;}
 .page_login .form_group .sns_btn_group li .icon.naver{width: 9px;height: 10px;background: url(../images/icon_naver.png) no-repeat;background-size: 100% auto;}
 .page_login .form_group .sns_btn_group li .icon.apple{width: 11px;height: 13px;background: url(../images/icon_apple.png) no-repeat;background-size: 100% auto;}
