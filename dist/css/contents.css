@@ -5,12 +5,20 @@
 
 .page_body {height: 100vh;}
 .page_body.n-height{height: auto;}
+.page_wrap{position: relative;}
 
 /* 공통 - 서브페이지 header */
-.sub_header{position: relative;padding: 19px 0 15px;background: #ff8b8a;}
+.sub_header{position: fixed;top: 0;left: 0;width: 100%;padding: 19px 0 15px;background: #ff8b8a;z-index: 10;}
 .sub_header h1{color: #fff;font-size: 18px;font-weight: bold;text-align: center;}
 .sub_header .btn_back{position: absolute;top: 50%;left: 14px;width: 30px;height: 30px;transform: translate(0,-50%);}
 .sub_header .btn_back::after{content: "";position: absolute;top: 9px;left: 12px;width: 10px;height: 10px;border: solid #fff;border-width: 2px 2px 0 0;transform: rotate(-135deg);}
+
+/* 공통 - 서브페이지 content */
+.sub_content {
+	min-height: calc(100vh - 123px);
+	padding: 60px 0 63px 0;
+	background: #f7f8fa;
+}
 
 /* 공통 - input 영역 */
 .form_group {max-width: 1200px;margin: 0 auto;padding: 0 14px;margin-top: 20px;}
@@ -38,7 +46,7 @@
 .btn_group button span{font-size: 15px;font-weight: bold;color: #fff;}
 
 /* 공통 - appbar */
-.app_bar {position: fixed;bottom: 0;left: 0;display: flex;width: 100%;padding: 10px 0 6px;background: #ff7777;justify-content: space-around;}
+.app_bar {position: fixed;bottom: 0;left: 0;display: flex;width: 100%;min-height: 47px;padding: 10px 0 6px;background: #ff7777;justify-content: space-around;}
 .app_bar .appbar_btn{width: 50px;position: relative;color: #fff;font-size: 11px;font-weight: bold;text-align: center;}
 .app_bar .appbar_btn::before{content: "";display: block;height: 24px;margin-bottom: 6px;}
 .app_bar .appbar_btn.home::before{background: url(../images/icon_home.png) no-repeat;background-position: center;background-size: 22px;}
@@ -86,12 +94,12 @@
 .join_btn.on .confirm_btn{background: #ff8080;}
 
 /* 메인 페이지 */
-.main_title{padding: 20px 0 13px;background: #ff8b8a;text-align: center;}
-.main_title img{max-width: 135px;}
-.main_container {position: relative;min-height: calc(100vh - 122.5px);background: #898989;}
+.main_header{position: fixed;top: 0;left: 0;width: 100%;padding: 20px 0 13px;background: #ff8b8a;text-align: center;z-index: 10;}
+.main_header img{max-width: 135px;}
+.main_container {position: relative;min-height: calc(100vh - 123px);padding: 60px 0 63px 0; background: #898989;}
 .map_control{
-	position: absolute;
-	top: 17px;
+	position: fixed;
+	top: 77px;
 	right: 14px;
 }
 .map_control button{
