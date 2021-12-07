@@ -160,3 +160,59 @@
 	color: #ff5c57;
 	font-weight: 500;
 }
+
+/* 갤러리 페이지 */
+.gallery_group{
+	padding: 20px 0;
+}
+.gallery_list{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 17px 14px;
+	background: #fff;
+}
+.gallery_list + .gallery_list{margin-top: 10px;}
+.gallery_list .content_area{
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+.gallery_list .content_area .img_area{
+	width: 75px;
+	height: 75px;
+}
+.gallery_list .content_area .txt_area span{
+	display: block;
+	margin-left: 20px;
+	color: #000;
+	font-size: 16px;
+	font-weight: bold;
+}
+.gallery_list .content_area .txt_area .type_date{
+	margin-top: 20px;
+	color: #ff635e;
+	font-size: 11px;
+}
+.gallery_list .stamp_area .stamp_name{
+	position: relative;
+	color: #cacaca;
+	font-size: 8px;
+	font-weight: bold;
+}
+.gallery_list .stamp_area .stamp_name::before{
+	content: "";
+	display: block;
+	width: 55px;
+	height: 55px;
+	margin: 0 auto;
+	background: url(../images/img_stamp.png) no-repeat;
+	background-size: 100% auto;
+}
+.gallery_list.on .stamp_area .stamp_name{
+	color: #ff6767;
+}
+.gallery_list.on .stamp_area .stamp_name::before{
+	background: url(../images/img_stamp_on.png) no-repeat;
+	background-size: 100% auto;
+}
