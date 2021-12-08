@@ -12,14 +12,12 @@
 .sub_header h1{color: #fff;font-size: 18px;font-weight: bold;text-align: center;}
 .sub_header .btn_back{position: absolute;top: 50%;left: 14px;width: 30px;height: 30px;transform: translate(0,-50%);}
 .sub_header .btn_back::after{content: "";position: absolute;top: 9px;left: 12px;width: 10px;height: 10px;border: solid #fff;border-width: 2px 2px 0 0;transform: rotate(-135deg);}
+.sub_header .btn_back.type02{background: url(../images/icon_back) center center no-repeat;background-size: 17px;}
+.sub_header .btn_back.type02::after{display: none;}
+.sub_header .btn_close{position: absolute;top: 50%;right: 14px;width: 30px;height: 30px;background: url(../images/icon_close.png) center center no-repeat;background-size: 13px;transform: translate(0,-50%);}
 
 /* 공통 - 서브페이지 content */
-.sub_content {
-	min-height: calc(100vh - 123px);
-	padding-top: 60px;
-	padding-bottom: calc(env(safe-area-inset-bottom) + 63px);
-	background: #f7f8fa;
-}
+.sub_content {min-height: calc(100vh - 123px);padding-top: 60px;padding-bottom: calc(env(safe-area-inset-bottom) + 63px);background: #f7f8fa;}
 
 /* 공통 - input 영역 */
 .form_group {max-width: 1200px;margin: 0 auto;padding: 0 14px;margin-top: 20px;}
@@ -40,9 +38,9 @@
 .form_group .check_box label::before{content: '';position: absolute;top: 50%;left: 0;width: 1.25rem;height: 1.25rem;margin-top: -11px;background-color: #fff;border: 1px solid #aaaaaa;border-radius: 100%;box-sizing: border-box;text-align: center;}
 .form_group .check_box label::after{content: '';position: absolute;top: 65%;left: 6px;width: 9px;height: 4px;margin-top: -6px;border-top: 0;border-right: 0;border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(0);transition: none;}
 
-
 /* 공통 - 버튼그룹 영역 */
 .btn_group{margin-top: 35px;}
+.btn_group.fixed-b{position: fixed;bottom: 0;left: 0;width: 100%;}
 .btn_group button{width: 100%;padding: 16px 0;text-align: center;background: #ff7777;}
 .btn_group button span{font-size: 15px;font-weight: bold;color: #fff;}
 
@@ -98,41 +96,18 @@
 .main_header{position: fixed;top: 0;left: 0;width: 100%;padding: 20px 0 13px;background: #ff8b8a;text-align: center;z-index: 10;}
 .main_header img{max-width: 135px;}
 .main_container {position: relative;min-height: calc(100vh - 123px);padding-top: 60px;padding-bottom: calc(env(safe-area-inset-bottom) + 63px); background: #898989;}
-.map_control{
-	position: fixed;
-	top: 77px;
-	right: 14px;
-}
-.map_control button{
-	display: block;
-	width: 38px;
-	height: 38px;
-	box-shadow: 4px 4px 3px 0px rgb(4 0 0 / 15%);
-	background: #ff8b8a;
-	border-radius: 100%;
-}
-.map_control .btn_map{
-	background: #ff8b8a url(../images/icon_map.png) center center no-repeat;
-	background-size: 20px;
-}
-.map_control .sub_control{
-	margin-top: 19px;
-}
-.map_control .sub_control button{
-	border-radius: 6px;
-}
+.map_control{position: fixed;top: 77px;right: 14px;}
+.map_control button{display: block;width: 38px;height: 38px;box-shadow: 4px 4px 3px 0px rgb(4 0 0 / 15%);background: #ff8b8a;border-radius: 100%;}
+.map_control .btn_map{background: #ff8b8a url(../images/icon_map.png) center center no-repeat;background-size: 20px;}
+.map_control .sub_control{margin-top: 19px;}
+.map_control .sub_control button{border-radius: 6px;}
 .map_control .sub_control button + button{margin-top: 7px;}
-.map_control .sub_control .btn_plus{
-	background: #ff8b8a url(../images/icon_plus.png) center center no-repeat;
-	background-size: 15px;
-}
-.map_control .sub_control .btn_minus{
-	background: #ff8b8a url(../images/icon_minus.png) center center no-repeat;
-	background-size: 15px;
-}
+.map_control .sub_control .btn_plus{background: #ff8b8a url(../images/icon_plus.png) center center no-repeat;background-size: 15px;}
+.map_control .sub_control .btn_minus{background: #ff8b8a url(../images/icon_minus.png) center center no-repeat;background-size: 15px;}
+.main_page .btn_group .btn_nav {padding: 13px 0 19px;color: #fff;font-size: 15px;font-weight: bold;}
 
 /* 메뉴 페이지 */
-.sub_header.menu{position: relative;display: flex;justify-content: space-between;align-items: center;padding: 9px 14px 14px;}
+.sub_header.menu{position: relative;display: flex;justify-content: space-between;align-items: center;padding: 9px 14px 14px;box-sizing: border-box;}
 .sub_header.menu::after{content: "";position: absolute;bottom: 0;left: 0;width: 100%;height: 5px;background: #dadada;}
 .sub_header.menu > div{display: flex;align-items: center;}
 .sub_header.menu .left_area .user_img{width: 38px;height: 38px;}
@@ -149,7 +124,7 @@
 .footer_info li:nth-child(n+3){margin-top: 10px;}
 
 /* 설정 페이지 */
-.profile_area {margin-top: 24px;}
+.profile_area {padding-top: 85px;}
 .profile_area .profile_img{position: relative;width: 100px;height: 100px;margin: 0 auto;border-radius: 100%;}
 .profile_area .profile_img img{display: block;width: 100%;height: 100%;object-fit: cover;object-position: center;}
 .profile_area .input_file{position: absolute;bottom: 0;right: 0;}
@@ -181,125 +156,36 @@
 .coloring_tab .tab_list input:checked + label{color: #fff;background-color: #ff635e;}
 .coloring_tab .tab_list label{min-width: 45px;padding: 3px 10px 5px;font-size: 16px;color: #010101;border-radius: 25px;box-sizing: border-box;cursor: pointer;text-align: center;}
 
-.coloring_list {
-	padding: 18px 14px;
-	font-size: 0;
-	text-align: center;
-}
-.coloring_list .list_item{
-	display: inline-block;
-	width: calc(50% - 12px);
-	margin: 16px 0 0 12px;
-}
-.coloring_list .list_item:nth-child(odd){
-	margin-left: 0;
-}
+.coloring_list {padding: 18px 14px;font-size: 0;text-align: center;}
+.coloring_list .list_item{display: inline-block;width: calc(50% - 12px);margin: 16px 0 0 12px;}
+.coloring_list .list_item:nth-child(odd){margin-left: 0;}
 .coloring_list .list_item:nth-child(1),
-.coloring_list .list_item:nth-child(2){
-	margin-top: 0;
-}
-.coloring_list .type_tit{
-	color: #545454;
-	font-size: 13px;
-}
-.coloring_list .img_area{
-	margin-top: 6px;
-	border: 3px solid #ffe4e4;
-	border-radius: 12px;
-	overflow: hidden;
-}
+.coloring_list .list_item:nth-child(2){margin-top: 0;}
+.coloring_list .type_tit{color: #545454;font-size: 13px;}
+.coloring_list .img_area{margin-top: 6px;border: 3px solid #ffe4e4;border-radius: 12px;overflow: hidden;}
 .coloring_list .img_area img{width: 100%;}
 
 /* 컬러링 시작 */
-.coloring_start{
-	padding: 20px 14px 0;
-}
+.coloring_start{padding: 20px 14px 0;}
 .coloring_start .img_area img{width: 100%;}
-.coloring_start .info_area{
-	margin-top: 30px;
-}
-.coloring_start span{
-	display: block;
-	color: #545454;
-	font-size: 14px;
-}
+.coloring_start .info_area{margin-top: 30px;}
+.coloring_start span{display: block;color: #545454;font-size: 14px;}
 .coloring_start span + span{margin-top: 18px;}
-.coloring_start .type_tit{
-	color: #000;
-	font-size: 16px;
-	font-weight: bold;
-}
+.coloring_start .type_tit{color: #000;font-size: 16px;font-weight: bold;}
 .coloring_start .type_point{display: inline-block;}
 
 .coloring_menu {margin-top: 36px;}
-.coloring_menu ul{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-.coloring_menu .menu_list a{
-	display: block;
-	width: 100%;
-	color: #545454;
-	font-size: 14px;
-	text-align: center;
-}
-.coloring_menu .menu_list .icon{
-	position: relative;
-	display: block;
-	width: 50px;
-	height: 50px;
-	margin-bottom: 18px;
-	border: 1px solid #d4d4d4;
-	border-radius: 100%;
-	background: #fff;
-}
-.coloring_menu .menu_list .icon.icon::before{
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 25px;
-	height: 25px;
-	transform: translate(-50%,-50%);
-}
-.coloring_menu .menu_list .icon.icon_road::before{
-	background: url(../images/icon_road.png) no-repeat;
-	background-size: 100% auto;
-}
-.coloring_menu .menu_list .icon.icon_guide::before{
-	background: url(../images/icon_guide.png) no-repeat;
-	background-size: 100% auto;
-}
-.coloring_menu .menu_list .icon.icon_diary::before{
-	width: 20px;
-	height: 22px;
-	background: url(../images/icon_diary01.png) no-repeat;
-	background-size: 100% auto;
-}
-.coloring_menu .menu_list .icon.icon_coloring::before{
-	background: url(../images/icon_coloring.png) no-repeat;
-	background-size: 100% auto;
-}
+.coloring_menu ul{display: flex;align-items: center;justify-content: space-between;}
+.coloring_menu .menu_list a{display: block;width: 100%;color: #545454;font-size: 14px;text-align: center;}
+.coloring_menu .menu_list .icon{position: relative;display: block;width: 50px;height: 50px;margin:  0 auto 18px;border: 1px solid #d4d4d4;border-radius: 100%;background: #fff;}
+.coloring_menu .menu_list .icon.icon::before{content: "";position: absolute;top: 50%;left: 50%;width: 25px;height: 25px;transform: translate(-50%,-50%);}
+.coloring_menu .menu_list .icon.icon_road::before{background: url(../images/icon_road.png) no-repeat;background-size: 100% auto;}
+.coloring_menu .menu_list .icon.icon_guide::before{background: url(../images/icon_guide.png) no-repeat;background-size: 100% auto;}
+.coloring_menu .menu_list .icon.icon_diary::before{width: 20px;height: 22px;background: url(../images/icon_diary01.png) no-repeat;background-size: 100% auto;}
+.coloring_menu .menu_list .icon.icon_coloring::before{background: url(../images/icon_coloring.png) no-repeat;background-size: 100% auto;}
 
-.coloring_menu .menu_list.on .icon{
-	border-color: #ffd7d7;
-}
-.coloring_menu .menu_list.on .icon.icon_road::before{
-	background: url(../images/icon_road_on.png) no-repeat;
-	background-size: 100% auto;
-}
-.coloring_menu .menu_list.on .icon.icon_guide::before{
-	background: url(../images/icon_guide_on.png) no-repeat;
-	background-size: 100% auto;
-}
-.coloring_menu .menu_list.on .icon.icon_diary::before{
-	width: 20px;
-	height: 22px;
-	background: url(../images/icon_diary01_on.png) no-repeat;
-	background-size: 100% auto;
-}
-.coloring_menu .menu_list.on .icon.icon_coloring::before{
-	background: url(../images/icon_coloring_on.png) no-repeat;
-	background-size: 100% auto;
-}
+.coloring_menu .menu_list.on .icon{border-color: #ffd7d7;}
+.coloring_menu .menu_list.on .icon.icon_road::before{background: url(../images/icon_road_on.png) no-repeat;background-size: 100% auto;}
+.coloring_menu .menu_list.on .icon.icon_guide::before{background: url(../images/icon_guide_on.png) no-repeat;background-size: 100% auto;}
+.coloring_menu .menu_list.on .icon.icon_diary::before{width: 20px;height: 22px;background: url(../images/icon_diary01_on.png) no-repeat;background-size: 100% auto;}
+.coloring_menu .menu_list.on .icon.icon_coloring::before{background: url(../images/icon_coloring_on.png) no-repeat;background-size: 100% auto;}
