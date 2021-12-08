@@ -40,7 +40,7 @@
 .form_group .check_box label::after{content: '';position: absolute;top: 65%;left: 6px;width: 9px;height: 4px;margin-top: -6px;border-top: 0;border-right: 0;border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(0);transition: none;}
 
 /* 공통 - 버튼그룹 영역 */
-.btn_group{margin-top: 35px;}
+.btn_group{margin-top: 35px;z-index: 1;}
 .btn_group button{width: 100%;padding: 16px 0;text-align: center;background: #ff7777;}
 .btn_group button span{font-size: 15px;font-weight: bold;color: #fff;}
 .btn_group.fixed-b{position: fixed;bottom: 0;left: 0;width: 100%;}
@@ -257,6 +257,7 @@
 
 /* 컬러링 그리기 */
 .coloring_play {padding: 20px 14px 0;}
+.coloring_play .img_area img{width: 100%;}
 
 .color-pick-slider li{width:auto;}
 .color-pick-slider li + li{margin-left:10px;}
