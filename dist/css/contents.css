@@ -89,6 +89,7 @@
 
 
 /* 회원가입 */
+.form_group .login_area.pt-61{padding-top: 61px;}
 .form_group .type_join input{padding: 14px 10px;}
 .notice_area{max-width: 180px;margin: 25px auto 0;}
 .notice_area .notice_tit{display: block;color: #000;font-size: 13px;font-weight: 500;text-align: center;}
@@ -164,8 +165,13 @@
 .coloring_tab::-webkit-scrollbar {display: none; }
 .coloring_tab .tab_list{position: relative;display: inline-block;}
 .coloring_tab .tab_list input{position: absolute;top: 0;left: 0;display: inline-block;width: 20px;height: 20px;padding: 0;border: 0;border-radius: 0;outline: 0;opacity: 0;}
-.coloring_tab .tab_list input:checked + label{color: #fff;background-color: #ff635e;}
+.coloring_tab .tab_list input:checked + label{color: #fff;border-color: #ff635e; background-color: #ff635e;}
 .coloring_tab .tab_list label{min-width: 45px;padding: 3px 10px 5px;font-size: 16px;color: #010101;border-radius: 25px;box-sizing: border-box;cursor: pointer;text-align: center;}
+
+.coloring_tab.type_scheadule{margin: 20px -14px 0 0;padding: 0 0 6px;border: none;}
+.coloring_tab.type_scheadule .tab_list + .tab_list{margin-left: 5px;}
+.coloring_tab.type_scheadule .tab_list label{color: #4a4a4a;font-size: 13px;border: 1px solid #dedede;}
+.coloring_tab .tab_list input:checked + label{font-weight: 500;background: #ff8b8a;}
 
 .coloring_list {padding: 18px 14px;font-size: 0;text-align: center;}
 .coloring_list .list_item{display: inline-block;width: calc(50% - 12px);margin: 16px 0 0 12px;}
@@ -254,72 +260,27 @@
 .opacity-range .text{flex:0 0 auto;padding:0 15px;color:#000;font-size:14px;text-align:center;}
 
 /* 다이어리 리스트 */
-.diary_group .diary_list{
-	display: flex;
-	padding: 20px 14px;
-	align-items: top;
-	justify-content: space-between;
-	border-bottom: 1px solid #dedede;
-}
-.diary_group .txt_area{
-	flex: 1;
-}
-.diary_group .txt_area > span{
-	display: block;
-	color: #010101;
-	font-size: 14px;
-}
+.diary_group .diary_list{display: flex;padding: 20px 14px;align-items: top;justify-content: space-between;border-bottom: 1px solid #dedede;}
+.diary_group .txt_area{flex: 1;}
+.diary_group .txt_area > span{display: block;color: #010101;font-size: 14px;}
 .diary_group .txt_area > span + span{margin-top: 2px;}
-.diary_group .txt_area .type_tit{
-	font-size: 16px;
-	font-weight: 500;
-}
-.diary_group .txt_area .type_txt{
-	display: -webkit-box;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-.diary_group .txt_area .type_date{
-	color: #545454;
-}
+.diary_group .txt_area .type_tit{font-size: 16px;font-weight: 500;}
+.diary_group .txt_area .type_txt{display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;}
+.diary_group .txt_area .type_date{color: #545454;}
 .diary_group .type_info{margin-top: -4px;}
-.diary_group .type_info span{
-	position: relative;
-	color: #545454;
-	font-size: 11px;
-}
+.diary_group .type_info span{position: relative;color: #545454;font-size: 11px;}
 .diary_group .type_info span + span{margin-left: 20px;}
-.diary_group .type_info span::before{
-	content: "";
-	position: relative;
-	top: 1px;
-	display: inline-block;
-	margin-right: 6px;
-}
-.diary_group .type_info .type_time::before{
-	width: 11px;
-	height: 11px;
-	background: url(../images/icon_time.png) no-repeat;
-	background-size: 100% auto;
-}
-.diary_group .type_info .type_place::before{
-	width: 9px;
-	height: 11px;
-	background: url(../images/icon_place.png) no-repeat;
-	background-size: 100% auto;
-}
-.diary_group .type_info .type_people::before{
-	width: 10px;
-	height: 11px;
-	background: url(../images/icon_people.png) no-repeat;
-	background-size: 100% auto;
-}
+.diary_group .type_info span::before{content: "";position: relative;top: 1px;display: inline-block;margin-right: 6px;}
+.diary_group .type_info .type_time::before{width: 11px;height: 11px;background: url(../images/icon_time.png) no-repeat;background-size: 100% auto;}
+.diary_group .type_info .type_place::before{width: 9px;height: 11px;background: url(../images/icon_place.png) no-repeat;background-size: 100% auto;}
+.diary_group .type_info .type_people::before{width: 10px;height: 11px;background: url(../images/icon_people.png) no-repeat;background-size: 100% auto;}
 
-.diary_group .img_area{
-	width: 85px;
-	padding-left: 24px;
-	border-radius: 12px;
-	overflow: hidden;
-}
+.diary_group .img_area{width: 85px;padding-left: 24px;border-radius: 12px;overflow: hidden;}
+
+/* 다이어리 일정 */
+.schedule_list{padding: 15px 14px 20px;border-bottom: 1px solid #dedede;}
+.schedule_list .map_area{width: 100%;height: 330px;border-radius: 5px;background: #dedede;}
+.schedule_list .info_area{margin-top: 21px;}
+.schedule_list .info_area span{display: block;color: #010101;font-size: 14px;}
+.schedule_list .info_area span + span{margin-top: 10px;}
+.schedule_list .info_area .type_date{font-size: 16px;font-weight: 500;}
