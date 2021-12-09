@@ -16,6 +16,7 @@
 	</head>
 	<body class="page_body">
 		<div class="page_wrap">
+			<button id="sample_button" style="border:1px solid #ddd;padding:10px;font-size:16px;display:inline-block;">버튼</button>
 			<!-- popup -->
 			<div class="design_popup_wrap" id="samplePopup">
 				<div class="bg_design_popup"></div>
@@ -25,6 +26,26 @@
 							<div class="design_popup_content_wrap">
 								<div class="design_popup_content">
 									내용이 들어갑니다.
+								</div>
+							</div>
+							<div class="btn_popupsubmit_wrap">
+								<a href="javascript:;" class="btn_popupsubmit close_trigger">확인</a> 
+								<a href="javascript:;" class="btn_popupsubmit close_trigger">취소</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- popup -->
+			<!-- popup -->
+			<div class="design_popup_wrap" id="samplePopup2">
+				<div class="bg_design_popup"></div>
+				<div class="design_popup_tb">
+					<div class="design_popup_td">
+						<div class="design_popup_item">
+							<div class="design_popup_content_wrap">
+								<div class="design_popup_content">
+									내용이 들어갑니다.2
 								</div>
 							</div>
 							<div class="btn_popupsubmit_wrap">
@@ -41,6 +62,11 @@
 					var designPopup = new DesignPopup({
 						selector: "#samplePopup"
 					});
+					document.getElementById("sample_button").addEventListener("click",function(){
+						var designPopup = new DesignPopup({
+							selector: "#samplePopup2"
+						});
+					},false);
 				});
 			</script>
 		</div>
