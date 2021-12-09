@@ -237,14 +237,18 @@
 .coloring_menu .menu_list.on .icon.icon_coloring::before{background: url(../images/icon_coloring_on.png) no-repeat;background-size: 100% auto;}
 
 .coloring_menu.type02{margin-top: 15px;}
-.coloring_menu.type02 .menu_list .icon{width: 25px;height: 25px;border: none;}
-.coloring_menu.type02 .menu_list .icon.icon_reset::before{background: url(../images/icon_reset.png) no-repeat;background-size: 100% auto;}
-.coloring_menu.type02 .menu_list .icon.icon_palette::before{background: url(../images/icon_palette.png) no-repeat;background-size: 100% auto;}
-.coloring_menu.type02 .menu_list .icon.icon_paint::before{background: url(../images/icon_paint.png) no-repeat;background-size: 100% auto;}
-.coloring_menu.type02 .menu_list .icon.icon_brush::before{background: url(../images/icon_brush.png) no-repeat;background-size: 100% auto;}
-.coloring_menu.type02 .menu_list .icon.icon_eraser::before{background: url(../images/icon_eraser.png) no-repeat;background-size: 100% auto;}
+.coloring_menu.type02 .menu_list .icon{width: 26px;height: 26px;border: none;}
+.coloring_menu.type02 .menu_list .icon.icon_reset::before{background: url(../images/icon_refresh.png) no-repeat;background-size: 100% auto;}
+.coloring_menu.type02 .menu_list .icon.icon_palette::before{background: url(../images/icon_pallette.png) no-repeat;background-size: 100% auto;}
+.coloring_menu.type02 .menu_list .icon.icon_paint::before{background: url(../images/icon_paint2.png) no-repeat;background-size: 100% auto;}
+.coloring_menu.type02 .menu_list .icon.icon_brush::before{background: url(../images/icon_brush2.png) no-repeat;background-size: 100% auto;}
+.coloring_menu.type02 .menu_list .icon.icon_eraser::before{background: url(../images/icon_eraser2.png) no-repeat;background-size: 100% auto;}
 
-
+.coloring_menu.type02 .menu_list.on .icon.icon_reset::before{background: url(../images/icon_refresh_on.png) no-repeat;background-size: 100% auto;}
+.coloring_menu.type02 .menu_list.on .icon.icon_palette::before{background: url(../images/icon_pallette_on.png) no-repeat;background-size: 100% auto;}
+.coloring_menu.type02 .menu_list.on .icon.icon_paint::before{background: url(../images/icon_paint2_on.png) no-repeat;background-size: 100% auto;}
+.coloring_menu.type02 .menu_list.on .icon.icon_brush::before{background: url(../images/icon_brush2_on.png) no-repeat;background-size: 100% auto;}
+.coloring_menu.type02 .menu_list.on .icon.icon_eraser::before{background: url(../images/icon_eraser2_on.png) no-repeat;background-size: 100% auto;}
 /* 컬러링 관광안내 */
 .colorting_guide{padding-bottom: 90px;}
 .colorting_guide .info_list{padding: 20px 14px 15px;border-bottom: 1px solid #dedede;}
