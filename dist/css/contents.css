@@ -302,8 +302,20 @@
 .diary_group .type_info .type_time::before{width: 11px;height: 11px;background: url(../images/icon_time.png) no-repeat;background-size: 100% auto;}
 .diary_group .type_info .type_place::before{width: 9px;height: 11px;background: url(../images/icon_place.png) no-repeat;background-size: 100% auto;}
 .diary_group .type_info .type_people::before{width: 10px;height: 11px;background: url(../images/icon_people.png) no-repeat;background-size: 100% auto;}
-
 .diary_group .img_area{width: 85px;padding-left: 24px;border-radius: 12px;overflow: hidden;}
+.write_area {
+	position: fixed;
+	bottom: 73px;
+	right: 14px;
+}
+.write_area .write_btn{
+	display: block;
+	width: 38px;
+	height: 38px;
+	border-radius: 100%;
+	background: #ff635e url(../images/icon_pencil.png) center center no-repeat;
+	background-size: 19px 20px;
+}
 
 /* 다이어리 일정 */
 .schedule_list{padding: 15px 14px 20px;border-bottom: 1px solid #dedede;}
