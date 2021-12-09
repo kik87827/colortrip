@@ -236,6 +236,7 @@
 .coloring_menu .menu_list.on .icon.icon_diary::before{width: 20px;height: 22px;background: url(../images/icon_diary01_on.png) no-repeat;background-size: 100% auto;}
 .coloring_menu .menu_list.on .icon.icon_coloring::before{background: url(../images/icon_coloring_on.png) no-repeat;background-size: 100% auto;}
 
+.coloring_menu.type02{margin-top: 15px;}
 .coloring_menu.type02 .menu_list .icon{width: 25px;height: 25px;border: none;}
 .coloring_menu.type02 .menu_list .icon.icon_reset::before{background: url(../images/icon_reset.png) no-repeat;background-size: 100% auto;}
 .coloring_menu.type02 .menu_list .icon.icon_palette::before{background: url(../images/icon_palette.png) no-repeat;background-size: 100% auto;}
@@ -281,6 +282,26 @@
 .color-pick-slider .color-lbl .blind{display: block;overflow: hidden;position: absolute;left: 0;top: -9999em;}
 .color-pick-slider .color-rdo:checked + .color-lbl::after{border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(1) translate(-50%,-50%);transition: transform 100ms ease-out;}
 
+.tutorial_group{text-align: right;}
+.tutorial_group .tutorial_btn{
+	position: relative;
+	color: #545454;
+	font-size: 11px;
+}
+.tutorial_group .tutorial_btn::after{
+	content: "";
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin-left: 7px;
+	border-radius: 100%;
+	background: #ff635e url(../images/icon_question.png) center center no-repeat;
+	background-size: 6px 10px;
+	vertical-align: top;
+}
+
+.coloring_detail {margin-top: 33px;}
+
 .opacity-range{display:flex;align-items:center;margin:25px 0;}
 .opacity-range .range{flex:1 1 auto;}
 .opacity-range input {width: 100%;-webkit-appearance: none;appearance: none;height: 18px;border-radius: 7px;outline: none;padding: 0;margin: 0;vertical-align: top;background: #ececec;}
@@ -303,19 +324,8 @@
 .diary_group .type_info .type_place::before{width: 9px;height: 11px;background: url(../images/icon_place.png) no-repeat;background-size: 100% auto;}
 .diary_group .type_info .type_people::before{width: 10px;height: 11px;background: url(../images/icon_people.png) no-repeat;background-size: 100% auto;}
 .diary_group .img_area{width: 85px;padding-left: 24px;border-radius: 12px;overflow: hidden;}
-.write_area {
-	position: fixed;
-	bottom: 73px;
-	right: 14px;
-}
-.write_area .write_btn{
-	display: block;
-	width: 38px;
-	height: 38px;
-	border-radius: 100%;
-	background: #ff635e url(../images/icon_pencil.png) center center no-repeat;
-	background-size: 19px 20px;
-}
+.write_area {position: fixed;bottom: 73px;right: 14px;}
+.write_area .write_btn{display: block;width: 38px;height: 38px;border-radius: 100%;background: #ff635e url(../images/icon_pencil.png) center center no-repeat;background-size: 19px 20px;}
 
 /* 다이어리 일정 */
 .schedule_list{padding: 15px 14px 20px;border-bottom: 1px solid #dedede;}
