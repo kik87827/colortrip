@@ -7,6 +7,32 @@
 .page_body.n-height{height: auto;}
 .page_wrap{position: relative;}
 
+/* 공통 alert confirm */
+.touchDis {touch-action: none;overflow:hidden;position:fixed;left:0;top:0;width:100%;height:100%;bottom:0;}
+.design_popup_wrap,
+.design_modal_wrap{position:fixed;top:0;left:0;width:100%;height:100%;z-index:100;min-width:280px;overflow:hidden;}
+.design_popup_wrap{display:none;}
+.design_popup_wrap.active{display:block;}
+.bg_design_modal,
+.bg_design_popup{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;opacity: .65;z-index:0;}
+.design_modal_tb{display:table;width:100%;height:100%;table-layout: fixed;z-index:5;position:absolute;top:0;left:0;}
+.design_modal_td{display:table-cell;vertical-align: middle;padding:28px;}
+.design_popup_item,
+.design_modal{background:#fff;position:relative;overflow: hidden;}
+.design_modal_cont_w{display:flex;align-items: center; justify-content: center;padding:20px;min-height:120px;box-sizing: border-box;}
+.design_modal_text{}
+
+.design_popup_tb{display:table;width:100%;height:100%;table-layout: fixed;z-index:5;position:absolute;top:0;left:0;}
+.design_popup_td{display:table-cell;vertical-align: middle;padding:28px;}
+.design_popup_item{background:#fff;position:relative;overflow: hidden;}
+.design_popup_content_wrap{position:relative;overflow:hidden;overflow-y:auto;}
+.design_popup_content{}
+
+.btn_dmsm_wrap{display:flex;align-items: center;justify-content: center;background:#ff7777;text-align:center;}
+.btn_dmsm{height:54px;flex:1;display:flex;align-items: center;margin:0 -1px;font-weight:500;justify-content: center;color:#fff;border-left:1px solid transparent;border-right:1px solid #ffa0a0;}
+.btn_popupsubmit_wrap{display:flex;align-items: center;justify-content: center;background:#ff7777;text-align:center;}
+.btn_popupsubmit{height:54px;flex:1;display:flex;align-items: center;margin:0 -1px;font-weight:500;justify-content: center;color:#fff;border-left:1px solid transparent;border-right:1px solid #ffa0a0;}
+
 /* 공통 - 서브페이지 header */
 .sub_header{position: fixed;top: 0;left: 0;width: 100%;padding: 19px 0 15px;background: #ff8b8a;z-index: 10;}
 .sub_header h1{color: #fff;font-size: 18px;font-weight: bold;text-align: center;}
