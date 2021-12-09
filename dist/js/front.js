@@ -128,7 +128,9 @@ dpprop.popupShow = function (target) {
         this.selector = document.querySelector(target);
         this.selector.classList.add("active");
         this.design_popup_content_wrap = this.selector.querySelector(".design_popup_content_wrap");
-        console.log(this.design_popup_content_wrap);
+        this.btn_popupsubmit_wrap = this.selector.querySelector(".btn_popupsubmit_wrap");
+        this.btn_popupsubmit_wrap_height = this.btn_popupsubmit_wrap !== null ? this.btn_popupsubmit_wrap.clientHeight : 0;
+        this.design_popup_content_wrap.style.maxHeight = (window.innerHeight - this.btn_popupsubmit_wrap_height) + "px";
         this.pagewrap.append(this.selector);
     }
 }
