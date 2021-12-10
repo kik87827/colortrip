@@ -29,6 +29,7 @@
 .design_popup_content_wrap{position:relative;overflow:hidden;overflow-y:auto;}
 .design_popup_content{}
 
+
 .btn_dmsm_wrap{display:flex;align-items: center;justify-content: center;background:#ff7777;text-align:center;}
 .btn_dmsm{height:54px;flex:1;display:flex;align-items: center;margin:0 -1px;font-weight:500;justify-content: center;color:#fff;border-left:1px solid transparent;border-right:1px solid #ffa0a0;}
 .btn_popupsubmit_wrap{display:flex;align-items: center;justify-content: center;background:#ff7777;text-align:center;}
@@ -287,22 +288,8 @@
 .color-pick-slider .color-rdo:checked + .color-lbl::after{border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(1) translate(-50%,-50%);transition: transform 100ms ease-out;}
 
 .tutorial_group{text-align: right;}
-.tutorial_group .tutorial_btn{
-	position: relative;
-	color: #545454;
-	font-size: 11px;
-}
-.tutorial_group .tutorial_btn::after{
-	content: "";
-	display: inline-block;
-	width: 18px;
-	height: 18px;
-	margin-left: 7px;
-	border-radius: 100%;
-	background: #ff635e url(../images/icon_question.png) center center no-repeat;
-	background-size: 6px 10px;
-	vertical-align: top;
-}
+.tutorial_group .tutorial_btn{position: relative;color: #545454;font-size: 11px;}
+.tutorial_group .tutorial_btn::after{content: "";display: inline-block;width: 18px;height: 18px;margin-left: 7px;border-radius: 100%;background: #ff635e url(../images/icon_question.png) center center no-repeat;background-size: 6px 10px;vertical-align: top;}
 
 .coloring_detail {margin-top: 33px;}
 
@@ -338,3 +325,19 @@
 .schedule_list .info_area span{display: block;color: #010101;font-size: 14px;}
 .schedule_list .info_area span + span{margin-top: 10px;}
 .schedule_list .info_area .type_date{font-size: 16px;font-weight: 500;}
+
+/*  네비 팝업 */
+#naviPopup .navi_area {padding: 33px 24px 28px;}
+#naviPopup .navi_area .type_tit{color: #0c0c0c;font-size: 15px;font-weight: bold;}
+#naviPopup .check_list{display: flex;align-items: center;justify-content: space-between;}
+#naviPopup .check_list + .check_list{margin-top: 16px;}
+#naviPopup .check_list .txt_box{display: flex;align-items: center;}
+#naviPopup .check_list .type_txt{margin-left: 26px;color: #0c0c0c;font-size: 14px;}
+#naviPopup .check_list .icon{display: block;width: 38px;height: 38px;}
+#naviPopup .check_list .icon.navi_inavi{background: url(../images/navi_inavi.png) no-repeat;background-size: 100% auto;}
+#naviPopup .check_list .icon.navi_naver{background: url(../images/navi_naver.png) no-repeat;background-size: 100% auto;}
+#naviPopup .check_list .icon.navi_kakao{background: url(../images/navi_kakao.png) no-repeat;background-size: 100% auto;}
+#naviPopup .check_list .icon.navi_google{background: url(../images/navi_google.png) no-repeat;background-size: 100% auto;}
+
+#naviPopup .check_list .input_box{margin-top: 0;}
+#naviPopup .check_list .input_box label{padding-left: 26px;}
