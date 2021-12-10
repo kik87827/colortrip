@@ -110,48 +110,73 @@ function DesignPopup(option) {
     this.domBody = document.querySelector("body");
     this.pagewrap = document.querySelector(".page_wrap");
     this.btn_popupsubmit_wrap = null;
+    this.btn_popupsubmit_td = null;
+    this.btn_popupsubmit_td_height = 0;
     this.btn_closeTrigger = null;
     this.btn_popupsubmit_wrap_height = 0;
     this.design_popup_content_wrap = null;
+    this.design_popup_content = null;
+    this.design_popup_content_top = 0;
+    this.btn_closeTrigger = null;
     this.popupShow(option.selector);
-    this.bindEvent(option);
 }
 
-var dpprop = DesignPopup.prototype;
-dpprop.popupShow = function (target) {
+DesignPopup.prototype.popupShow = function (target) {
     if (target !== undefined) {
+        /*
         for (var i = 0; i < this.design_popup_wrap.length; i++) {
             if (this.design_popup_wrap[i].classList.contains('active')) {
                 this.popupHide(this.design_popup_wrap[i]);
             }
-        }
+        }*/
+
+        this.domHtml.classList.add("touchDis");
+        this.domBody.style.marginTop = -window.pageYOffset+"px";
+        this.domBody.setAttribute("data-scr", window.pageYOffset)
+
         this.selector = document.querySelector(target);
         this.selector.classList.add("active");
         this.design_popup_content_wrap = this.selector.querySelector(".design_popup_content_wrap");
+        this.design_popup_content = this.selector.querySelector(".design_popup_content");
         this.btn_popupsubmit_wrap = this.selector.querySelector(".btn_popupsubmit_wrap");
-        this.btn_popupsubmit_wrap_height = this.btn_popupsubmit_wrap !== null ? this.btn_popupsubmit_wrap.clientHeight : 0;
-        this.design_popup_content_wrap.style.maxHeight = (window.innerHeight - this.btn_popupsubmit_wrap_height) + "px";
+        this.btn_closeTrigger = this.selector.querySelectorAll(".close_trigger");
+        this.design_popup_content_top = this.design_popup_content !== null ? this.design_popup_content.getBoundingClientRect().top : 0;
+        this.btn_popupsubmit_wrap_height = this.btn_popupsubmit_wrap !== null ? this.btn_popupsubmit_wrap.getBoundingClientRect().height : 0;
+        this.design_popup_content_wrap.style.maxHeight = (window.innerHeight - this.btn_popupsubmit_wrap_height - (this.design_popup_content_top * 2)) + "px";
         this.pagewrap.append(this.selector);
+        this.bindEvent(this.selector);
     }
 }
-dpprop.popupHide = function (target) {
+DesignPopup.prototype.popupHide = function (target) {
     var objThis = this;
     if (target !== undefined) {
-        this.selector = target || document.querySelector(target);
+        if (typeof target =="object"){
+            this.selector = target;
+        }else{
+            this.selector = document.querySelector(target);
+        }
         this.selector.classList.remove("active");
     }
-    this.domHtml.classList.remove("touchDis");
-    this.domBody.style.marginTop = 0;
-    window.scrollTo(0, Number(this.domBody.getAttribute("data-scr")));
+    this.design_popup_wrap_active = document.querySelectorAll(".design_popup_wrap.active");
+    if (this.design_popup_wrap_active.length==0){
+        this.domHtml.classList.remove("touchDis");
+        this.domBody.style.marginTop = 0;
+        window.scrollTo(0, Number(this.domBody.getAttribute("data-scr")));
+    }
 }
-dpprop.bindEvent = function (option){
+
+DesignPopup.prototype.bindEvent = function () {
     var objThis = this;
-    this.btn_closeTrigger = this.selector.querySelectorAll(".close_trigger");
-    if (this.btn_closeTrigger.length){
+
+    if (this.btn_closeTrigger.length) {
         for (var i = 0; i < this.btn_closeTrigger.length; i++) {
             this.btn_closeTrigger[i].addEventListener("click", function () {
                 objThis.popupHide(objThis.selector);
             }, false);
         }
     }
+
+    window.addEventListener("resize", function () {
+        objThis.design_popup_content_wrap.style.maxHeight = (window.innerHeight - objThis.btn_popupsubmit_wrap_height - (objThis.design_popup_content_top * 2)) + "px";
+    }, false);
 };
