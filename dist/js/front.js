@@ -113,27 +113,22 @@ function DesignPopup(option) {
     this.btn_popupsubmit_td = null;
     this.btn_popupsubmit_td_height = 0;
     this.btn_closeTrigger = null;
+    this.bg_design_popup = null;
     this.btn_popupsubmit_wrap_height = 0;
     this.design_popup_content_wrap = null;
     this.design_popup_td = null;
+    this.scrollValue = 0;
     this.design_popup_content = null;
     this.design_popup_content_top = 0;
-    this.btn_closeTrigger = null;
     this.popupShow(option.selector);
 }
 
 DesignPopup.prototype.popupShow = function (target) {
     if (target !== undefined) {
-        /*
-        for (var i = 0; i < this.design_popup_wrap.length; i++) {
-            if (this.design_popup_wrap[i].classList.contains('active')) {
-                this.popupHide(this.design_popup_wrap[i]);
-            }
-        }*/
-
-        this.domHtml.classList.add("touchDis");
+        this.domBody.setAttribute("data-scr", window.pageYOffset);
         this.domBody.style.marginTop = -window.pageYOffset+"px";
-        this.domBody.setAttribute("data-scr", window.pageYOffset)
+        this.scrollValue = window.pageYOffset;
+        this.domHtml.classList.add("touchDis");
 
         this.selector = document.querySelector(target);
         this.selector.classList.add("active");
@@ -145,6 +140,7 @@ DesignPopup.prototype.popupShow = function (target) {
         this.design_popup_content_top = this.design_popup_content !== null ? parseInt(getComputedStyle(this.design_popup_td).paddingTop) : 0;
         this.btn_popupsubmit_wrap_height = this.btn_popupsubmit_wrap !== null ? this.btn_popupsubmit_wrap.getBoundingClientRect().height : 0;
         this.design_popup_content_wrap.style.maxHeight = (window.innerHeight - this.btn_popupsubmit_wrap_height - (this.design_popup_content_top * 2)) + "px";
+        this.bg_design_popup = this.selector.querySelector(".bg_design_popup");
         this.pagewrap.append(this.selector);
         this.bindEvent(this.selector);
     }
@@ -163,7 +159,7 @@ DesignPopup.prototype.popupHide = function (target) {
     if (this.design_popup_wrap_active.length==0){
         this.domHtml.classList.remove("touchDis");
         this.domBody.style.marginTop = 0;
-        window.scrollTo(0, Number(this.domBody.getAttribute("data-scr")));
+        window.scrollTo(0, parseInt(this.domBody.getAttribute("data-scr")));
     }
 }
 
@@ -178,7 +174,14 @@ DesignPopup.prototype.bindEvent = function () {
         }
     }
 
+    if (this.bg_design_popup !== null){
+        this.bg_design_popup.addEventListener("click", function () {
+            objThis.popupHide(objThis.selector);
+        }, false);
+    }
+
     window.addEventListener("resize", function () {
+        
         objThis.design_popup_content_wrap.style.maxHeight = (window.innerHeight - objThis.btn_popupsubmit_wrap_height - (objThis.design_popup_content_top * 2)) + "px";
     }, false);
 };
