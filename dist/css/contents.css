@@ -338,6 +338,8 @@
 #naviPopup .check_list .icon.navi_naver{background: url(../images/navi_naver.png) no-repeat;background-size: 100% auto;}
 #naviPopup .check_list .icon.navi_kakao{background: url(../images/navi_kakao.png) no-repeat;background-size: 100% auto;}
 #naviPopup .check_list .icon.navi_google{background: url(../images/navi_google.png) no-repeat;background-size: 100% auto;}
-
 #naviPopup .check_list .input_box{margin-top: 0;}
 #naviPopup .check_list .input_box label{padding-left: 26px;}
+
+#naviPopup .form_group{padding: 0;}
+#naviPopup .form_area >  .input_box{margin-top: 35px;}
