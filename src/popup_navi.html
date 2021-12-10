@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		@@include('./include/head.html')
+	</head>
+	<body class="page_body">
+		<div class="page_wrap">
+			<button id="sample_button" style="border:1px solid #ddd;padding:10px;font-size:16px;display:inline-block;">버튼</button>
+			<!-- popup -->
+			<div class="design_popup_wrap" id="naviPopup">
+				<div class="bg_design_popup"></div>
+				<div class="design_popup_tb">
+					<div class="design_popup_td">
+						<div class="design_popup_item">
+							<div class="design_popup_content_wrap">
+								<div class="design_popup_content">
+									<div class="navi_area">
+										<span class="type_tit">연동할 앱을 선택하세요.</span>
+										<div class="form_group">
+											<form class="form_area">
+												<div class="check_list">
+													<div class="txt_box">
+														<i class="icon navi_inavi"></i>
+														<span class="type_txt">아이나비 에어</span>
+													</div>
+													<div class="input_box check_box">
+														<input type="checkbox" id="check01">
+														<label for="check01"></label>
+													</div>
+												</div>
+												<div class="check_list">
+													<div class="txt_box">
+														<i class="icon navi_naver"></i>
+														<span class="type_txt">네이버 길찾기</span>
+													</div>
+													<div class="input_box check_box">
+														<input type="checkbox" id="check02">
+														<label for="check02"></label>
+													</div>
+												</div>
+												<div class="check_list">
+													<div class="txt_box">
+														<i class="icon navi_kakao"></i>
+														<span class="type_txt">카카오 네비</span>
+													</div>
+													<div class="input_box check_box">
+														<input type="checkbox" id="check03">
+														<label for="check03"></label>
+													</div>
+												</div>
+												<div class="check_list">
+													<div class="txt_box">
+														<i class="icon navi_google"></i>
+														<span class="type_txt">구글 길찾기</span>
+													</div>
+													<div class="input_box check_box">
+														<input type="checkbox" id="check04">
+														<label for="check04"></label>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="btn_popupsubmit_wrap">
+								<a href="javascript:;" class="btn_popupsubmit close_trigger">확인</a> 
+								<a href="javascript:;" class="btn_popupsubmit close_trigger">취소</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- popup -->
+			<!-- popup -->
+			<div class="design_popup_wrap" id="naviPopup">
+				<div class="bg_design_popup"></div>
+				<div class="design_popup_tb">
+					<div class="design_popup_td">
+						<div class="design_popup_item">
+							<div class="design_popup_content_wrap">
+								<div class="design_popup_content">
+									내용이 들어갑니다.2
+								</div>
+							</div>
+							<div class="btn_popupsubmit_wrap">
+								<a href="javascript:;" class="btn_popupsubmit close_trigger">확인</a> 
+								<a href="javascript:;" class="btn_popupsubmit close_trigger">취소</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- popup -->
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+					var designPopup = new DesignPopup({
+						selector: "#naviPopup"
+					});
+					document.getElementById("sample_button").addEventListener("click",function(){
+						var designPopup2 = new DesignPopup({
+							selector: "#naviPopup"
+						});
+						// designPopup2.popupHide("#samplePopup2");
+					},false);
+				});
+			</script>
+		</div>
+	</body>
+</html>
