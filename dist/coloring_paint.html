@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="./css/reset.css" />
+<link rel="stylesheet" href="./css/swiper.min.css" />
+<link rel="stylesheet" href="./css/contents.css" />
+<script src="./js/swiper.min.js"></script>
+<script src="./js/front.js"></script>
+<!-- <script src="./js/vue.js"></script> -->
+<title></title>
+
+	</head>
+	<body class="page_body">
+		<div class="page_wrap">
+			<header class="sub_header">
+				<h1>종달리해안도로</h1>
+				<button class="btn_back type02"></button>
+				<button type="button" class="btn_close"></button>
+			</header>
+			<div class="sub_content bg_white">
+				<div class="coloring_container">
+					<div class="coloring_play">
+						<div class="img_area">
+							<img src="../dist/images/img_coloring_dummy01.png" alt="">
+						</div>
+						<div class="tutorial_group">
+							<button type="button" class="tutorial_btn">튜토리얼</button>
+						</div>
+						<div class="coloring_menu type02">
+							<ul>
+								<!-- menu_list + on class 추칵 시 아이콘 활성화 됩니다. -->
+								<li class="menu_list">
+									<button type="button">
+										<span class="icon icon_reset"></span>
+										되돌리기
+									</button>
+								</li>
+								<li class="menu_list">
+									<button type="button">
+										<span class="icon icon_palette"></span>
+										팔레트
+									</button>
+								</li>
+								<li class="menu_list on">
+									<button type="button">
+										<span class="icon icon_paint"></span>
+										페인트통
+									</button>
+								</li>
+								<li class="menu_list">
+									<button type="button">
+										<span class="icon icon_brush"></span>
+										브러시툴
+									</button>
+								</li>
+								<li class="menu_list">
+									<button type="button">
+										<span class="icon icon_eraser"></span>
+										지우개
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="coloring_detail">	
+							<div id="color_pick_slider" class="color-pick-slider swiper-container">
+								<ul class="swiper-wrapper">
+									<li class="swiper-slide">
+										<input type="radio" id="color1" name="color" class="color-rdo" value="#fe0000">
+										<label for="color1" class="color-lbl" style="background:#fe0000;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color2" name="color" class="color-rdo" value="#ff3301">
+										<label for="color2" class="color-lbl" style="background:#ff3301;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color3" name="color" class="color-rdo" value="#ff7f00">
+										<label for="color3" class="color-lbl" style="background:#ff7f00;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color4" name="color" class="color-rdo" value="#ffb200">
+										<label for="color4" class="color-lbl" style="background:#ffb200;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color5" name="color" class="color-rdo" value="#f4f41b">
+										<label for="color5" class="color-lbl" style="background:#f4f41b;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color6" name="color" class="color-rdo" value="#b2db11">
+										<label for="color6" class="color-lbl" style="background:#b2db11;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color7" name="color" class="color-rdo" value="#80c31c">
+										<label for="color7" class="color-lbl" style="background:#80c31c;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color8" name="color" class="color-rdo" value="#4bab26">
+										<label for="color8" class="color-lbl" style="background:#4bab26;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color9" name="color" class="color-rdo" value="#008738">
+										<label for="color9" class="color-lbl" style="background:#008738;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color10" name="color" class="color-rdo" value="#00752f">
+										<label for="color10" class="color-lbl" style="background:#00752f;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color11" name="color" class="color-rdo" value="#016646">
+										<label for="color11" class="color-lbl" style="background:#016646;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color12" name="color" class="color-rdo" value="#025155">
+										<label for="color12" class="color-lbl" style="background:#025155;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color13" name="color" class="color-rdo" value="#225aa5">
+										<label for="color13" class="color-lbl" style="background:#225aa5;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color14" name="color" class="color-rdo" value="#314397">
+										<label for="color14" class="color-lbl" style="background:#314397;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color15" name="color" class="color-rdo" value="#0e146a">
+										<label for="color15" class="color-lbl" style="background:#0e146a;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color16" name="color" class="color-rdo" value="#3e107c">
+										<label for="color16" class="color-lbl" style="background:#3e107c;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color17" name="color" class="color-rdo" value="#67087c">
+										<label for="color17" class="color-lbl" style="background:#67087c;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color18" name="color" class="color-rdo" value="#90007b">
+										<label for="color18" class="color-lbl" style="background:#90007b;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color19" name="color" class="color-rdo" value="#980033">
+										<label for="color19" class="color-lbl" style="background:#980033;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+									<li class="swiper-slide">
+										<input type="radio" id="color20" name="color" class="color-rdo" value="#cd0021">
+										<label for="color20" class="color-lbl" style="background:#cd0021;">
+											<span class="blind">color</span>
+										</label>
+									</li>
+								</ul>
+							</div>
+							<div class="opacity-range" >
+								<span class="text">100%</span>
+								<span class="range">
+									<input type="range" min="0" max="100" value="100">
+								</span>
+								<span class="text">0%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="btn_group fixed-b flex">
+				<button type="button" class="btn_exit">나중에 계속 그리기</button>
+				<button type="button" class="btn_confirm">컬러링 완성</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var $color_pick_slider = document.getElementById("color_pick_slider");
+			var color_pick_slider = new Swiper($color_pick_slider,{
+					slidesPerView: "auto",
+					freeMode: true,
+					resistanceRatio: 0
+				});
+		</script>
+	</body>
+</html>
