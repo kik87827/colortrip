@@ -115,6 +115,7 @@ function DesignPopup(option) {
     this.btn_closeTrigger = null;
     this.btn_popupsubmit_wrap_height = 0;
     this.design_popup_content_wrap = null;
+    this.design_popup_td = null;
     this.design_popup_content = null;
     this.design_popup_content_top = 0;
     this.btn_closeTrigger = null;
@@ -140,7 +141,8 @@ DesignPopup.prototype.popupShow = function (target) {
         this.design_popup_content = this.selector.querySelector(".design_popup_content");
         this.btn_popupsubmit_wrap = this.selector.querySelector(".btn_popupsubmit_wrap");
         this.btn_closeTrigger = this.selector.querySelectorAll(".close_trigger");
-        this.design_popup_content_top = this.design_popup_content !== null ? this.design_popup_content.getBoundingClientRect().top : 0;
+        this.design_popup_td = this.selector.querySelector(".design_popup_td");
+        this.design_popup_content_top = this.design_popup_content !== null ? parseInt(getComputedStyle(this.design_popup_td).paddingTop) : 0;
         this.btn_popupsubmit_wrap_height = this.btn_popupsubmit_wrap !== null ? this.btn_popupsubmit_wrap.getBoundingClientRect().height : 0;
         this.design_popup_content_wrap.style.maxHeight = (window.innerHeight - this.btn_popupsubmit_wrap_height - (this.design_popup_content_top * 2)) + "px";
         this.pagewrap.append(this.selector);
