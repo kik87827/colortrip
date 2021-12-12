@@ -119,7 +119,11 @@ function DesignPopup(option) {
     this.design_popup_td = null;
     this.scrollValue = 0;
     this.design_popup_content = null;
+    this.dbot_titlow = null;
+    this.dbot_titlow_height = 0;
+    this.dbot_contlow = null;
     this.design_popup_content_top = 0;
+    this.btn_dbotclose = null;
     this.popupShow(option.selector);
 }
 
@@ -137,9 +141,18 @@ DesignPopup.prototype.popupShow = function (target) {
         this.btn_popupsubmit_wrap = this.selector.querySelector(".btn_popupsubmit_wrap");
         this.btn_closeTrigger = this.selector.querySelectorAll(".close_trigger");
         this.design_popup_td = this.selector.querySelector(".design_popup_td");
+        this.btn_dbotclose = this.selector.querySelector(".btn_dbotclose");
+        this.dbot_titlow = this.selector.querySelector(".dbot_titlow");
+        this.dbot_contlow = this.selector.querySelector(".dbot_contlow");
+        this.dbot_titlow_height = this.dbot_titlow !== null ? parseInt(getComputedStyle(this.dbot_titlow).height) : 0;
         this.design_popup_content_top = this.design_popup_content !== null ? parseInt(getComputedStyle(this.design_popup_td).paddingTop) : 0;
         this.btn_popupsubmit_wrap_height = this.btn_popupsubmit_wrap !== null ? this.btn_popupsubmit_wrap.getBoundingClientRect().height : 0;
-        this.design_popup_content_wrap.style.maxHeight = (window.innerHeight - this.btn_popupsubmit_wrap_height - (this.design_popup_content_top * 2)) + "px";
+        if (this.dbot_contlow !== null){
+            this.dbot_contlow.style.maxHeight = "calc(90vh - " + this.dbot_titlow_height + "px)";
+        }
+        if (this.design_popup_content_wrap !== null){
+            this.design_popup_content_wrap.style.maxHeight = (window.innerHeight - this.btn_popupsubmit_wrap_height - (this.design_popup_content_top * 2)) + "px";
+        }
         this.bg_design_popup = this.selector.querySelector(".bg_design_popup");
         this.pagewrap.append(this.selector);
         this.bindEvent(this.selector);
@@ -180,8 +193,19 @@ DesignPopup.prototype.bindEvent = function () {
         }, false);
     }
 
+    if (this.btn_dbotclose !== null){
+        this.btn_dbotclose.addEventListener("click", function () {
+            objThis.popupHide(objThis.selector);
+        }, false);
+    }
+
     window.addEventListener("resize", function () {
-        
-        objThis.design_popup_content_wrap.style.maxHeight = (window.innerHeight - objThis.btn_popupsubmit_wrap_height - (objThis.design_popup_content_top * 2)) + "px";
+        objThis.dbot_titlow_height = objThis.dbot_titlow !== null ? parseInt(getComputedStyle(objThis.dbot_titlow).height) : 0;
+        if (objThis.dbot_contlow !== null) {
+            objThis.dbot_contlow.style.maxHeight = "calc(90vh - " + objThis.dbot_titlow_height + "px)";
+        }
+        if (objThis.design_popup_content_wrap !== null) {
+            objThis.design_popup_content_wrap.style.maxHeight = (window.innerHeight - objThis.btn_popupsubmit_wrap_height - (objThis.design_popup_content_top * 2)) + "px";
+        }
     }, false);
 };

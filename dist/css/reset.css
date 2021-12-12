@@ -40,3 +40,4 @@ input[type="file"]{vertical-align:middle; width:300px; border:1px solid #d4d4d4}
 input[type=text]::-ms-clear {
   display:none;
 }
+.hdtext{display:inline-block;width:0;height:0;overflow:hidden;line-height:0;color:transparent;position:absolute;top:0;left:-99999px;}
