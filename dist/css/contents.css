@@ -376,64 +376,47 @@
 
 /* 팝업 - 브러쉬 */
 #brushPopup .design_popup_content{padding-bottom: 19px;}
-#brushPopup .brush_area{
-	display: flex;
-	padding: 16px 23px 18px;
-	background: #f6f6f6;
-	align-items: center;
-	justify-content: space-between;
-}
+#brushPopup .brush_area{display: flex;padding: 16px 23px 18px;background: #f6f6f6;align-items: center;justify-content: space-between;}
 #brushPopup .brush_list{text-align: center;}
-#brushPopup .brush_item input{
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	border: 0;
-	overflow: hidden;
-	clip: rect(0 0 0 0);
+#brushPopup .brush_item input{position: absolute;width: 1px;height: 1px;margin: -1px;padding: 0;border: 0;overflow: hidden;clip: rect(0 0 0 0);}
+#brushPopup .brush_item label{position: relative;display: block;width: 50px;height: 50px;margin: 0 auto;border: 1px solid #d4d4d4;border-radius: 100%;}
+#brushPopup .brush_item label::before{content: "";position: absolute;top: 50%;left: 50%;width: 25px;height: 25px;transform: translate(-50%,-50%);}
+#brushPopup .brush_item label.icon_colorpencil::before{background: url('../images/icon_colorpencil.png') no-repeat;background-size: 100% auto;}
+#brushPopup .brush_item label.icon_crayon::before{background: url('../images/icon_crayon.png') no-repeat;background-size: 100% auto;}
+#brushPopup .brush_item label.icon_brush::before{background: url('../images/icon_brush.png') no-repeat;background-size: 100% auto;}
+#brushPopup .brush_item label.icon_pen::before{background: url('../images/icon_brush.png') no-repeat;background-size: 100% auto;}
+#brushPopup .brush_item input:checked + label{border-color: #ffd7d7;}
+#brushPopup .brush_name{display: block;margin-top: 22px;color: #545454;font-size: 14px;}
+
+/* 팝업 - 튜토리얼 */
+#tutorialPopup .tutorial_area{
+	padding: 40px 14px 100px;
 }
-#brushPopup .brush_item label{
-	position: relative;
-	display: block;
-	width: 50px;
-	height: 50px;
+#tutorialPopup .img_area{
+	width: 250px;
+	height: 250px;
 	margin: 0 auto;
-	border: 1px solid #d4d4d4;
-	border-radius: 100%;
+	background: #f6f6f6;
 }
-#brushPopup .brush_item label::before{
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 25px;
-	height: 25px;
-	transform: translate(-50%,-50%);
+#tutorialPopup .txt-area{
+	margin-top: 20px;
+	text-align: center;
 }
-#brushPopup .brush_item label.icon_colorpencil::before{
-	background: url('../images/icon_colorpencil.png') no-repeat;
-  background-size: 100% auto;
-}
-#brushPopup .brush_item label.icon_crayon::before{
-	background: url('../images/icon_crayon.png') no-repeat;
-  background-size: 100% auto;
-}
-#brushPopup .brush_item label.icon_brush::before{
-	background: url('../images/icon_brush.png') no-repeat;
-  background-size: 100% auto;
-}
-#brushPopup .brush_item label.icon_pen::before{
-	background: url('../images/icon_brush.png') no-repeat;
-  background-size: 100% auto;
-}
-#brushPopup .brush_item input:checked + label{
-	border-color: #ffd7d7;
-}
-#brushPopup .brush_name{
+#tutorialPopup .txt-area span{
 	display: block;
-	margin-top: 22px;
-	color: #545454;
-	font-size: 14px;
+	color: #000;
+	font-size: 15px;
 }
+#tutorialPopup .txt-area span + span{margin-top: 21px;}
+#tutorialPopup .txt-area .tutorial_tit{
+	position: relative;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+}
+#tutorialPopup.tutorialPopup01 .txt-area .ico_tutorial01{padding-left: 60px;}
+#tutorialPopup.tutorialPopup01 .txt-area .ico_tutorial01::before{content: "";position: absolute;top: 0;left: 0;width: 48px;height: 20px;background: url(../images/icon_tutorial01.png) no-repeat;background-size: 100% auto;}
+#tutorialPopup.tutorialPopup02 .txt-area .ico_tutorial01{padding-left: 32px;}
+#tutorialPopup.tutorialPopup02 .txt-area .ico_tutorial01::before{content: "";position: absolute;top: 0;left: 0;width: 20px;height: 20px;background: url(../images/icon_tutorial02.png) no-repeat;background-size: 100% auto;}
+#tutorialPopup.tutorialPopup03 .txt-area .ico_tutorial01{padding-left: 32px;}
+#tutorialPopup.tutorialPopup03 .txt-area .ico_tutorial01::before{content: "";position: absolute;top: 0;left: 0;width: 20px;height: 20px;background: url(../images/icon_tutorial03.png) no-repeat;background-size: 100% auto;}
