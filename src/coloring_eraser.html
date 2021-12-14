@@ -7,7 +7,7 @@
 		<div class="page_wrap">
 			<header class="sub_header">
 				<h1>종달리해안도로</h1>
-				<button class="btn_back type02"></button>
+				<button class="btn_back"></button>
 				<button type="button" class="btn_close"></button>
 			</header>
 			<div class="sub_content bg_white">
@@ -40,13 +40,13 @@
 										페인트통
 									</button>
 								</li>
-								<li class="menu_list on">
+								<li class="menu_list">
 									<button type="button">
 										<span class="icon icon_brush"></span>
-										브러시툴
+									브러시툴
 									</button>
 								</li>
-								<li class="menu_list">
+								<li class="menu_list on">
 									<button type="button">
 										<span class="icon icon_eraser"></span>
 										지우개
@@ -182,8 +182,14 @@
 							<div class="opacity-range" >
 								<span class="text">100%</span>
 								<span class="range">
-									<input type="range" min="0" max="100" value="100">
+									<input type="range" min="0" max="100" value="100" id="range_item">
 								</span>
+								<style>
+									#range_item{
+										background: rgb(1,33,3);
+										background: linear-gradient(90deg, rgba(1,33,3,1) 0%, rgba(67,145,72,1) 47%, rgba(255,255,255,1) 100%);
+									}
+								</style>
 								<span class="text">0%</span>
 							</div>
 						</div>
