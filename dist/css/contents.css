@@ -384,36 +384,21 @@
 #brushPopup .brush_item label.icon_colorpencil::before{background: url('../images/icon_colorpencil.png') no-repeat;background-size: 100% auto;}
 #brushPopup .brush_item label.icon_crayon::before{background: url('../images/icon_crayon.png') no-repeat;background-size: 100% auto;}
 #brushPopup .brush_item label.icon_brush::before{background: url('../images/icon_brush.png') no-repeat;background-size: 100% auto;}
-#brushPopup .brush_item label.icon_pen::before{background: url('../images/icon_brush.png') no-repeat;background-size: 100% auto;}
+#brushPopup .brush_item label.icon_pen::before{background: url('../images/icon_pen.png') no-repeat;background-size: 100% auto;}
 #brushPopup .brush_item input:checked + label{border-color: #ffd7d7;}
+#brushPopup .brush_item input:checked + label.icon_colorpencil::before{background: url('../images/icon_colorpencil_on.png') no-repeat;background-size: 100% auto;}
+#brushPopup .brush_item input:checked + label.icon_crayon::before{background: url('../images/icon_crayon_on.png') no-repeat;background-size: 100% auto;}
+#brushPopup .brush_item input:checked + label.icon_brush::before{background: url('../images/icon_brush_on.png') no-repeat;background-size: 100% auto;}
+#brushPopup .brush_item input:checked + label.icon_pen::before{background: url('../images/icon_pen_on.png') no-repeat;background-size: 100% auto;}
 #brushPopup .brush_name{display: block;margin-top: 22px;color: #545454;font-size: 14px;}
 
 /* 팝업 - 튜토리얼 */
-#tutorialPopup .tutorial_area{
-	padding: 40px 14px 100px;
-}
-#tutorialPopup .img_area{
-	width: 250px;
-	height: 250px;
-	margin: 0 auto;
-	background: #f6f6f6;
-}
-#tutorialPopup .txt-area{
-	margin-top: 20px;
-	text-align: center;
-}
-#tutorialPopup .txt-area span{
-	display: block;
-	color: #000;
-	font-size: 15px;
-}
+#tutorialPopup .tutorial_area{padding: 40px 14px 100px;}
+#tutorialPopup .img_area{width: 250px;height: 250px;margin: 0 auto;background: #f6f6f6;}
+#tutorialPopup .txt-area{margin-top: 20px;text-align: center;}
+#tutorialPopup .txt-area span{display: block;color: #000;font-size: 15px;}
 #tutorialPopup .txt-area span + span{margin-top: 21px;}
-#tutorialPopup .txt-area .tutorial_tit{
-	position: relative;
-	display: inline-block;
-	font-size: 16px;
-	font-weight: bold;
-}
+#tutorialPopup .txt-area .tutorial_tit{position: relative;display: inline-block;font-size: 16px;font-weight: bold;}
 #tutorialPopup.tutorialPopup01 .txt-area .ico_tutorial01{padding-left: 60px;}
 #tutorialPopup.tutorialPopup01 .txt-area .ico_tutorial01::before{content: "";position: absolute;top: 0;left: 0;width: 48px;height: 20px;background: url(../images/icon_tutorial01.png) no-repeat;background-size: 100% auto;}
 #tutorialPopup.tutorialPopup02 .txt-area .ico_tutorial01{padding-left: 32px;}
