@@ -55,8 +55,6 @@
 .sub_header h1{color: #fff;font-size: 18px;font-weight: bold;text-align: center;}
 .sub_header .btn_back{position: absolute;top: 50%;left: 14px;width: 30px;height: 30px;transform: translate(0,-50%);}
 .sub_header .btn_back::after{content: "";position: absolute;top: 9px;left: 12px;width: 10px;height: 10px;border: solid #fff;border-width: 2px 2px 0 0;transform: rotate(-135deg);}
-.sub_header .btn_back.type02{background: url(../images/icon_back) center center no-repeat;background-size: 17px;}
-.sub_header .btn_back.type02::after{display: none;}
 .sub_header .btn_close{position: absolute;top: 50%;right: 14px;width: 30px;height: 30px;background: url(../images/icon_close.png) center center no-repeat;background-size: 13px;transform: translate(0,-50%);}
 
 /* 공통 - 서브페이지 content */
