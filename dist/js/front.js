@@ -53,7 +53,10 @@ DesignModal.prototype.initShow = function (option) {
     innerPublish += "      </div>";
     innerPublish += "  </div>";
     innerPublish += "</div>";
-    this.pagewrap.innerHTML = innerPublish;
+    this.modalparent = document.createElement('div');
+    this.pagewrap.appendChild(this.modalparent);
+    this.modalparent.classList.add("design_modal_insert_wrap");
+    this.modalparent.innerHTML = innerPublish;
     if (option.type === "confirm" || option.type === "alert") {
         this.design_modal_text = document.querySelector(".design_modal_text");
         this.btn_dmsmidentify = document.querySelector(".btn_dmsmidentify");
@@ -64,13 +67,14 @@ DesignModal.prototype.initShow = function (option) {
     }
     this.pagewrap.style.zIndex = 0;
     this.domBody.setAttribute("data-scr", window.pageYOffset);
-    this.domBody.style.marginTop = window.pageYOffset;
+    this.domBody.style.marginTop = -window.pageYOffset+"px";
     this.domHtml.classList.add("touchDis");
     this.design_modal_wrap = document.querySelector(".design_modal_wrap");
     this.closetrigger = document.querySelectorAll(".close_dmtrigger");
     this.bindEvent(option);
 }
 DesignModal.prototype.removeHide = function () {
+    document.querySelector(".design_modal_insert_wrap").remove();
     this.design_modal_wrap.remove();
     this.domHtml.classList.remove("touchDis");
     this.domBody.style.marginTop = 0;
