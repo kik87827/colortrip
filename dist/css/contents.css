@@ -45,7 +45,11 @@
 .btn_dmsm_wrap{display:flex;align-items: center;justify-content: center;background:#ff7777;text-align:center;}
 .btn_dmsm{height:54px;flex:1;display:flex;align-items: center;margin:0 -1px;font-weight:500;justify-content: center;color:#fff;border-left:1px solid transparent;border-right:1px solid #ffa0a0;}
 .btn_popupsubmit_wrap{display:flex;align-items: center;justify-content: center;background:#ff7777;text-align:center;}
-.btn_popupsubmit{height:54px;flex:1;display:flex;align-items: center;margin:0 -1px;font-weight:500;justify-content: center;color:#fff;border-left:1px solid transparent;border-right:1px solid #ffa0a0;}
+.btn_popupsubmit.swiper-button-next{
+    position: initial;
+    height:54px;flex:1;display:flex;align-items: center;margin:0 -1px;font-weight:500;justify-content: center;color:#fff;border-left:1px solid transparent;border-right:1px solid #ffa0a0;
+    background: none;
+}
 .design_popup_content_wrap .btn_close{position: absolute;top: 12px;right: 7px;width: 30px;height: 30px;background: url(../images/icon_close_black.png) center center no-repeat;background-size: 13px;transform: translate(0);}
 
 
@@ -203,7 +207,7 @@
 .gallery_list .content_area .txt_area span{display: block;margin-left: 20px;color: #000;font-size: 16px;font-weight: bold;}
 .gallery_list .content_area .txt_area .type_date{margin-top: 20px;color: #ff635e;font-size: 11px;}
 .gallery_list .content_area .txt_area .type_date::before{content: "";display: inline-block;width: 11px;height: 13px;margin-right: 6px;position:relative;top:-1.5px;vertical-align:middle;background: url(../images/icon_calendar.png) no-repeat;background-size: 100% auto;background-position: 0 1px;}
-.gallery_list .stamp_area{display:flex;font-size:0;line-height:0;align-items: center;}
+.gallery_list .stamp_area{display:flex;font-size:0;line-height:0;align-items: center;flex: 0 0 90px;}
 .gallery_list .stamp_area .stamp_name{position: relative;color: #cacaca;font-size: 8px;line-height:1;font-weight: bold;display:inline-block;text-align:center;}
 .gallery_list .stamp_area .stamp_name::before{content: "";display: block;width: 55px;height: 55px;margin: 0 auto 8px;background: url(../images/img_stamp.png) no-repeat;background-size: 100% auto;}
 .gallery_list.on .stamp_area .stamp_name{color: #ff6767;}
@@ -260,12 +264,15 @@
 .coloring_menu .menu_list.on .icon.icon_coloring::before{background: url(../images/icon_coloring_on.png) no-repeat;background-size: 100% auto;}
 
 .coloring_menu.type02{margin-top: 15px;}
+.coloring_menu.type02 .menu_list button{font-size: 13px;}
 .coloring_menu.type02 .menu_list .icon{width: 26px;height: 26px;border: none;}
 .coloring_menu.type02 .menu_list .icon.icon_reset::before{background: url(../images/icon_refresh.png) no-repeat;background-size: 100% auto;}
 .coloring_menu.type02 .menu_list .icon.icon_palette::before{background: url(../images/icon_pallette.png) no-repeat;background-size: 100% auto;}
 .coloring_menu.type02 .menu_list .icon.icon_paint::before{background: url(../images/icon_paint2.png) no-repeat;background-size: 100% auto;}
 .coloring_menu.type02 .menu_list .icon.icon_brush::before{background: url(../images/icon_brush2.png) no-repeat;background-size: 100% auto;}
 .coloring_menu.type02 .menu_list .icon.icon_eraser::before{background: url(../images/icon_eraser2.png) no-repeat;background-size: 100% auto;}
+.coloring_menu.type02 .menu_list .icon.icon_zoom::before{width: 22px;height: 22px;background: url(../images/icon_zoom.png) no-repeat;background-size: 100% auto;}
+
 
 .coloring_menu.type02 .menu_list.on .icon.icon_reset::before{background: url(../images/icon_refresh_on.png) no-repeat;background-size: 100% auto;}
 .coloring_menu.type02 .menu_list.on .icon.icon_palette::before{background: url(../images/icon_pallette_on.png) no-repeat;background-size: 100% auto;}
@@ -370,7 +377,9 @@
 /* 팝업 - 팔레트 */
 #palettePopup .palette_area{padding-bottom: 4px;}
 #palettePopup .palette_group{display: flex;padding: 22px 35px;background: #f6f6f6;align-items: center;justify-content: space-between;}
+#palettePopup .palette_group.on {border: solid #ff6767;border-width: 1px 0; background: #f6eeee;}
 #palettePopup .palette_group .palette_tit{display: block;min-width: 30px;color: #000000;font-size: 16px;text-align: center;}
+#palettePopup .palette_group.on .palette_tit {color: #ff6767; font-weight: bold;}
 #palettePopup .palette_group + .palette_group{margin-top: 20px;}
 #palettePopup .palette_box {padding-left: 50px; font-size: 0;}
 #palettePopup .palette_box .palette_list{position: relative; display: inline-block;width: calc(25% - 8px);margin-left: 10px;}
@@ -381,7 +390,7 @@
 #palettePopup .palette_box .color-lbl{display:inline-block;width:31px;height:31px;border-radius:50%;text-align:center;}
 #palettePopup .palette_box .color-lbl::after{content: '';position: absolute;top: 15px;left: 16px;width: 13px;height: 5px;margin-top: -8px;border-top: 0;border-right: 0;border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(0);transition: none;}
 #palettePopup .palette_box .color-lbl .blind{display: block;overflow: hidden;position: absolute;left: 0;top: -9999em;}
-#palettePopup .palette_box .color-rdo:checked + .color-lbl::after{border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(1) translate(-50%,-50%);transition: transform 100ms ease-out;}
+/* #palettePopup .palette_box .color-rdo:checked + .color-lbl::after{border-bottom: 2px solid #fff;border-left: 2px solid #fff;transform: rotate(-45deg) scale(1) translate(-50%,-50%);transition: transform 100ms ease-out;} */
 
 /* 팝업 - 브러쉬 */
 #brushPopup .design_bottom_popup_w {padding-bottom: 19px;}
@@ -405,16 +414,17 @@
 /* 팝업 - 튜토리얼 */
 #tutorialPopup .tutorial_area{padding: 40px 14px 100px;}
 #tutorialPopup .img_area{width: 250px;height: 250px;margin: 0 auto;background: #f6f6f6;background-position:50% 50%;background-repeat:no-repeat;background-size:cover;}
+#tutorialPopup .img_area img{width: 100%;height: 100%;object-fit: cover;object-position: 50% 50%;}
 #tutorialPopup .txt-area{margin-top: 20px;text-align: center;}
 #tutorialPopup .txt-area span{display: block;color: #000;font-size: 15px;}
 #tutorialPopup .txt-area span + span{margin-top: 21px;}
 #tutorialPopup .txt-area .tutorial_tit{position: relative;display: inline-block;font-size: 16px;font-weight: bold;}
-#tutorialPopup.tutorialPopup01 .txt-area .ico_tutorial01{padding-left: 60px;}
-#tutorialPopup.tutorialPopup01 .txt-area .ico_tutorial01::before{content: "";position: absolute;top: 0;left: 0;width: 48px;height: 20px;background: url(../images/icon_tutorial01.png) no-repeat;background-size: 100% auto;}
-#tutorialPopup.tutorialPopup02 .txt-area .ico_tutorial01{padding-left: 32px;}
-#tutorialPopup.tutorialPopup02 .txt-area .ico_tutorial01::before{content: "";position: absolute;top: 0;left: 0;width: 20px;height: 20px;background: url(../images/icon_tutorial02.png) no-repeat;background-size: 100% auto;}
-#tutorialPopup.tutorialPopup03 .txt-area .ico_tutorial01{padding-left: 32px;}
-#tutorialPopup.tutorialPopup03 .txt-area .ico_tutorial01::before{content: "";position: absolute;top: 0;left: 0;width: 20px;height: 20px;background: url(../images/icon_tutorial03.png) no-repeat;background-size: 100% auto;}
+#tutorialPopup .tutorial_area .txt-area .ico_tutorial01{padding-left: 60px;}
+#tutorialPopup .tutorial_area .txt-area .ico_tutorial01::before{content: "";position: absolute;top: 0;left: 0;width: 48px;height: 20px;background: url(../images/icon_tutorial01.png) no-repeat;background-size: 100% auto;}
+#tutorialPopup .tutorial_area .txt-area .ico_tutorial02{padding-left: 32px;}
+#tutorialPopup .tutorial_area .txt-area .ico_tutorial02::before{content: "";position: absolute;top: 0;left: 0;width: 20px;height: 20px;background: url(../images/icon_tutorial02.png) no-repeat;background-size: 100% auto;}
+#tutorialPopup .tutorial_area .txt-area .ico_tutorial03{padding-left: 32px;}
+#tutorialPopup .tutorial_area .txt-area .ico_tutorial03::before{content: "";position: absolute;top: 0;left: 0;width: 20px;height: 20px;background: url(../images/icon_tutorial03.png) no-repeat;background-size: 100% auto;}
 
 
 /* gallery */
@@ -487,3 +497,7 @@ textarea.sc_vta::-moz-input-placeholder{color:#636363;font-size:14px;}
 textarea.sc_vta:-ms-input-placeholder{color:#636363;font-size:14px;}
 textarea.sc_vta::-ms-input-placeholder{color:#636363;font-size:14px;}
 textarea.sc_vta::input-placeholder{color:#636363;font-size:14px;}
+
+@media (max-width: 360px){
+    .coloring_menu.type02 .menu_list button{font-size: 12px;}
+}
