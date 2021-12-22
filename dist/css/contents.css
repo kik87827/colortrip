@@ -6,6 +6,7 @@
 .page_body {height: 100vh;}
 .page_body.n-height{height: auto;}
 .page_wrap{position: relative;}
+.hsibilngs_fixed{position:fixed;top:0;left:0;width:100%;z-index:8;}
 
 /* 공통 alert confirm */
 .touchDis {touch-action: none;overflow:hidden;position:fixed;left:0;top:0;width:100%;height:100%;bottom:0;}
@@ -64,7 +65,7 @@
 .sub_content.bg_white{background: #fff;}
 .sub_content.mt_20{margin-top: 20px;}
 .sub_ctin{padding:15px 15px 50px;}
-.page_wrap.has_tfg .sub_content{padding-top:117px;}
+.sub_content.has_tfg{padding-top:117px;}
 
 /* 공통 - input */
 .form_group {max-width: 1200px;margin: 0 auto;padding: 0 14px;margin-top: 20px;}
@@ -96,6 +97,7 @@
 .btn_group.flex button + button::after{content: "";position: absolute;top: 0;left: 0;width: 1px;height: 100%;background: #ff9696;}
 
 /* 공통 - 탭 메뉴 */
+.tab_menu_layer_w{background: #f7f8fa;position:fixed;top:60px;left:0;width:100%;z-index:8;}
 .tab_menu{display: flex;padding: 10px 0;border-bottom: 1px solid #dedede;background: #f7f8fa; align-items: center;justify-content: space-around;}
 .tab_menu .menu_list{display: block;padding: 3px 15px 6px;}
 .tab_menu .menu_list .type_txt{color: #000;font-size: 15px;}
@@ -211,6 +213,7 @@
 
 
 /* 컬러링 페이지 */
+.coloring_tab_w_layer{position:fixed;top:60px;left:0;width:100%;z-index:8;background:#f7f8fa;}
 .coloring_tab_w{height:57px;position:relative;}
 .coloring_tab{padding: 0 5px;border-bottom: 1px solid #dedede;overflow: auto;white-space: nowrap;-ms-overflow-style: none;scrollbar-width: none;height:56px;display:flex;align-items: center;}
 .coloring_tab::-webkit-scrollbar {display: none; }
@@ -219,7 +222,9 @@
 .coloring_tab .tab_list input:checked + label{color: #fff;border-color: #ff635e; background-color: #ff635e;}
 .coloring_tab .tab_list label{min-width: 45px;padding: 3px 10px 5px;font-size: 16px;color: #010101;border-radius: 25px;box-sizing: border-box;cursor: pointer;text-align: center;}
 
-.coloring_tab.type_scheadule{margin: 20px -14px 0 0;padding: 0 0 6px;border: none;}
+.coloring_tab.type_scheadule{margin: 20px -14px 0 -14px;padding: 0 0 6px;border: none;}
+.coloring_tab.type_scheadule .tab_list:first-of-type{margin-left:14px;}
+.coloring_tab.type_scheadule .tab_list:last-of-type{margin-right:14px;}
 .coloring_tab.type_scheadule .tab_list + .tab_list{margin-left: 5px;}
 .coloring_tab.type_scheadule .tab_list label{color: #4a4a4a;font-size: 13px;border: 1px solid #dedede;}
 .coloring_tab.type_scheadule .tab_list input:checked + label{font-weight: 500;background: #ff8b8a;}
@@ -447,12 +452,16 @@
 .fca_menu_item{flex:1;position:relative;text-align:center;padding:35px 0;}
 .fca_menu_w{display:inline-block;position:relative;}
 .fca_menu{display:inline-block;font-size:0;line-height:0;}
-.fca_menu:before{display:block;content:'';width:38px;height:27px;background:url("../images/ico_form_sub.png") no-repeat 0 0/100% auto;margin:0 auto;}
-.fca_menu.ico_01:before{background-position:0 0;}
-.fca_menu.ico_02:before{background-position:0 -27px;}
-.fca_menu.ico_03:before{background-position:0 -54px;}
-.fca_menu.ico_04:before{background-position:0 -81px;}
-.fca_menu.ico_05:before{background-position:0 -108px;}
+.fca_menu:before{display:block;content:'';width:38px;height:27px;background-repeat:no-repeat;background-size:100% auto;background-position: 0 0;margin:0 auto;}
+.fca_menu.ico_01:before{background-image:url("../images/ico_form_sub01.png");}
+.fca_menu.ico_02:before{background-image:url("../images/ico_form_sub02.png");}
+.fca_menu.ico_03:before{background-image:url("../images/ico_form_sub03.png");}
+.fca_menu.ico_04:before{background-image:url("../images/ico_form_sub04.png");}
+.fca_menu.ico_05:before{background-image:url("../images/ico_form_sub05.png");}
+.fca_menu.ico_06:before{background-image:url("../images/ico_form_sub06.png");}
+.fca_menu.ico_07:before{background-image:url("../images/ico_form_sub07.png");}
+.fca_menu.ico_08:before{background-image:url("../images/ico_form_sub08.png");}
+.fca_menu.ico_09:before{background-image:url("../images/ico_form_sub09.png");}
 .fca_menu_text{font-size:12px;color:#000000;line-height:1.3;margin-top:5px;display:block;font-weight: 350;}
 .hidden_file{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;}
 

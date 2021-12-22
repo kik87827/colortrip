@@ -24,6 +24,10 @@ function commonInit() {
         // iPad or iPhone
         document.querySelector("html").classList.add("ios");
     }
+
+    window.onload = function(){
+        headsiblingsLayer();
+    }
 }
 
 function resizeLayout(){
@@ -72,6 +76,23 @@ function TabFunc(option){
 
 }
 
+function headsiblingsLayer(){
+    var subheaderlayer = document.querySelector(".sub_header");
+    var subheaderlayer_height = subheaderlayer !== null ? subheaderlayer.clientHeight : 0;
+    var hsibilngs_fixed = document.querySelector(".hsibilngs_fixed");
+    var hsibilngs_fixed_height = hsibilngs_fixed !== null ? hsibilngs_fixed.clientHeight : 0;
+    var sub_content = document.querySelector(".sub_content");
+
+    window.addEventListener("resize",function(){
+        action();
+    },false);
+    action();
+
+    function action(){
+        sub_content.removeAttribute("style");
+        sub_content.style.paddingTop = subheaderlayer_height + hsibilngs_fixed_height + "px";
+    }
+}
 
 function siblings(t) {
     var children = t.parentElement.children;
