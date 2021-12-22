@@ -52,6 +52,29 @@
 			</div>
 			<!--  -->
 			<div class="bottom_app_layer">
+				<div class="bg_bottom_app_layer"></div>
+				<div class="form_botsub_z">
+					<div class="form_botsub_w">
+						<button type="button" class="btn_formbotsub"></button>
+						<div class="form_bosub active">
+							<!-- 스티커리스트 -->
+							<div class="form_bosubcont" id="form_bosubcont01">
+								스티커리스트
+							</div>
+							<!-- // 스티커리스트 -->
+							<!-- 템플릿리스트 -->
+							<div class="form_bosubcont" id="form_bosubcont02">
+								템플릿리스트
+							</div>
+							<!-- // 템플릿리스트 -->
+							<!-- 여행일정 -->
+							<div class="form_bosubcont" id="form_bosubcont03">
+								여행일정
+							</div>
+							<!-- // 여행일정 -->
+						</div>
+					</div>
+				</div>
 				<div class="form_botapp_w">
 					<a href="#form_cont01" class="btn_fbotapp ico_01 active"></a>
 					<a href="#form_cont02" class="btn_fbotapp ico_02"></a>
@@ -94,13 +117,12 @@
 						<div class="fca_menu_item_w">
 							<div class="fca_menu_item">
 								<div class="fca_menu_w">
-									<a href="#" class="fca_menu ico_05"><span class="fca_menu_text">스티커 첨부</span></a>
-									<input type="file" class="hidden_file">
+									<a href="#" class="fca_menu ico_05" id="btn_sticker_add"><span class="fca_menu_text">스티커 첨부</span></a>
 								</div>
 							</div>
 							<div class="fca_menu_item">
 								<div class="fca_menu_w">
-									<a href="#" class="fca_menu ico_06"><span class="fca_menu_text">템플릿 꾸미기</span></a>
+									<a href="#" class="fca_menu ico_06" id="btn_design_temp"><span class="fca_menu_text">템플릿 꾸미기</span></a>
 								</div>
 							</div>
 						</div>
@@ -109,7 +131,7 @@
 						<div class="fca_menu_item_w">
 							<div class="fca_menu_item">
 								<div class="fca_menu_w">
-									<a href="#" class="fca_menu ico_07"><span class="fca_menu_text">여행일정</span></a>
+									<a href="#" class="fca_menu ico_07" id="btn_travel_sch"><span class="fca_menu_text">여행일정</span></a>
 								</div>
 							</div>
 						</div>
@@ -146,8 +168,86 @@
 			<script>
 				document.addEventListener("DOMContentLoaded", function () {
 					resizeLayout();
-					var tabItem = new TabFunc({ tab : ".form_botapp_w .btn_fbotapp"})
+					var tabItem = new TabFunc({ tab : ".form_botapp_w .btn_fbotapp"});
+
+					var bg_bottom_app_layer = document.querySelector(".bg_bottom_app_layer");
+					var form_botsub_w = document.querySelector(".form_botsub_w");
+					var btn_formbotsub = document.querySelector(".btn_formbotsub");
+					var btn_fbotapp = document.querySelectorAll(".btn_fbotapp");
+					var btn_fbotapp_ico_03 = document.querySelector(".btn_fbotapp.ico_03");
+					var btn_fbotapp_ico_04 = document.querySelector(".btn_fbotapp.ico_04");
+					var form_bosub = document.querySelector(".form_bosub");
+					var btn_sticker_add = document.querySelector("#btn_sticker_add");
+					var btn_design_temp = document.querySelector("#btn_design_temp");
+					var btn_travel_sch = document.querySelector("#btn_travel_sch");
+					var form_bosubcont01 = document.querySelector("#form_bosubcont01");
+					var form_bosubcont02 = document.querySelector("#form_bosubcont02");
+					var form_bosubcont03 = document.querySelector("#form_bosubcont03");
+
+					for (var i = 0; i < btn_fbotapp.length; i++) {
+						btn_fbotapp[i].addEventListener("click", function (e) {
+							e.preventDefault();
+							resetSubForm();
+						}, false);
+					}
+
+					bg_bottom_app_layer.addEventListener("click", function () {
+						resetSubForm();
+					}, false);
+
+
+					btn_formbotsub.addEventListener("click", function () {
+						this.classList.toggle("active");
+						form_bosub.classList.toggle("active");
+					}, false);
+
+					btn_sticker_add.addEventListener("click", function () {
+						btn_design_temp.classList.remove("active");
+						this.classList.add("active");
+						form_botsub_w.classList.add("active");
+
+						form_bosubcont01.classList.add("active");
+						form_bosubcont02.classList.remove("active");
+						form_bosubcont03.classList.remove("active");
+						
+						bg_bottom_app_layer.classList.add("active");
+					}, false);
+
+
+					btn_design_temp.addEventListener("click", function () {
+						btn_sticker_add.classList.remove("active");
+						this.classList.add("active");
+						form_botsub_w.classList.add("active");
+
+						form_bosubcont02.classList.add("active");
+						form_bosubcont01.classList.remove("active");
+						form_bosubcont03.classList.remove("active");
+						
+						bg_bottom_app_layer.classList.add("active");
+					}, false);
+
+					
+					btn_travel_sch.addEventListener("click", function () {
+						btn_formbotsub.classList.remove("active");
+						btn_design_temp.classList.remove("active");
+						this.classList.add("active");
+						form_botsub_w.classList.add("active");
+
+						form_bosubcont03.classList.add("active");
+						form_bosubcont02.classList.remove("active");
+						form_bosubcont01.classList.remove("active");
+
+						bg_bottom_app_layer.classList.add("active");
+					}, false);
+					function resetSubForm(){
+						bg_bottom_app_layer.classList.remove("active");
+						btn_sticker_add.classList.remove("active");
+						btn_design_temp.classList.remove("active");
+						btn_travel_sch.classList.remove("active");
+						form_botsub_w.classList.remove("active");
+					}
 				});
+
 			</script>
 		</div>
 	</body>

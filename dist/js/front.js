@@ -33,6 +33,10 @@ function commonInit() {
 function resizeLayout(){
     var d_minsc = document.querySelector(".d_minsc");
     var bottom_app_layer = document.querySelector(".bottom_app_layer");
+    var form_botsub_z = document.querySelector(".form_botsub_z");
+    var form_botapp_w = document.querySelector(".form_botapp_w");
+    var form_botapp_w_pos = form_botapp_w !== null ? form_botapp_w.getBoundingClientRect().top : 0;
+   
 
     action();
     window.addEventListener("resize", function () {
@@ -41,7 +45,11 @@ function resizeLayout(){
 
     function action(){
         var bottom_app_layer_height = bottom_app_layer !== null ? bottom_app_layer.clientHeight : 0;
+        form_botapp_w_pos = form_botapp_w !== null ? form_botapp_w.getBoundingClientRect().top : 0;
+        console.log(form_botsub_z);
+        form_botsub_z.removeAttribute("style");
         d_minsc.removeAttribute("style");
+        form_botsub_z.style.maxHeight = form_botapp_w_pos+"px";
         if (!document.querySelector('html').classList.contains('ios')){
             d_minsc.style.paddingBottom = bottom_app_layer_height+"px";
         }else{
@@ -49,6 +57,9 @@ function resizeLayout(){
         }
     }
 }
+
+
+
 
 
 function TabFunc(option){
