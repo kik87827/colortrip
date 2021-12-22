@@ -19,8 +19,70 @@ function commonInit() {
     if (userAgent.indexOf('samsung') > -1) {
         document.querySelector("html").classList.add("samsung");
     }
+
+    if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+        // iPad or iPhone
+        document.querySelector("html").classList.add("ios");
+    }
 }
 
+function resizeLayout(){
+    var d_minsc = document.querySelector(".d_minsc");
+    var bottom_app_layer = document.querySelector(".bottom_app_layer");
+
+    action();
+    window.addEventListener("resize", function () {
+        action();
+    }, false);
+
+    function action(){
+        var bottom_app_layer_height = bottom_app_layer !== null ? bottom_app_layer.clientHeight : 0;
+        d_minsc.removeAttribute("style");
+        if (!document.querySelector('html').classList.contains('ios')){
+            d_minsc.style.paddingBottom = bottom_app_layer_height+"px";
+        }else{
+            d_minsc.style.paddingBottom = "calc(env(safe-area-inset-bottom) + "+bottom_app_layer_height+"px)";
+        }
+    }
+}
+
+
+function TabFunc(option){
+    this.tabtarget = document.querySelectorAll(option.tab);
+    if (this.tabtarget.length) {
+        for (var i = 0; i < this.tabtarget.length; i++) {
+            var togis = false;
+            this.tabtarget[i].addEventListener("click", function (e) {
+                e.preventDefault();
+                var t_t = this;
+                var t_n = siblings(t_t);
+                var cont_target = document.querySelector(t_t.getAttribute("href"));
+                var cont_target_not = siblings(cont_target);
+                for (var i = 0; i < t_n.length; i++){
+                    t_n[i].classList.remove("active");
+                }
+                t_t.classList.toggle("active");
+                for (var i = 0; i < cont_target_not.length; i++){
+                    cont_target_not[i].classList.remove("active");
+                }
+                cont_target.classList.toggle("active");
+            }, false);
+        }
+    }
+
+}
+
+
+function siblings(t) {
+    var children = t.parentElement.children;
+    var tempArr = [];
+    for (var i = 0; i < children.length; i++) {
+        tempArr.push(children[i]);
+    }
+    return tempArr.filter(function (e) {
+        return e != t;
+    });
+}
 
 function DesignModal(option) {
     this.message = option.message;
@@ -53,7 +115,10 @@ DesignModal.prototype.initShow = function (option) {
     innerPublish += "      </div>";
     innerPublish += "  </div>";
     innerPublish += "</div>";
-    this.pagewrap.innerHTML = innerPublish;
+    this.modalparent = document.createElement('div');
+    this.pagewrap.appendChild(this.modalparent);
+    this.modalparent.classList.add("design_modal_insert_wrap");
+    this.modalparent.innerHTML = innerPublish;
     if (option.type === "confirm" || option.type === "alert") {
         this.design_modal_text = document.querySelector(".design_modal_text");
         this.btn_dmsmidentify = document.querySelector(".btn_dmsmidentify");
@@ -64,13 +129,14 @@ DesignModal.prototype.initShow = function (option) {
     }
     this.pagewrap.style.zIndex = 0;
     this.domBody.setAttribute("data-scr", window.pageYOffset);
-    this.domBody.style.marginTop = window.pageYOffset;
+    this.domBody.style.marginTop = -window.pageYOffset+"px";
     this.domHtml.classList.add("touchDis");
     this.design_modal_wrap = document.querySelector(".design_modal_wrap");
     this.closetrigger = document.querySelectorAll(".close_dmtrigger");
     this.bindEvent(option);
 }
 DesignModal.prototype.removeHide = function () {
+    document.querySelector(".design_modal_insert_wrap").remove();
     this.design_modal_wrap.remove();
     this.domHtml.classList.remove("touchDis");
     this.domBody.style.marginTop = 0;
